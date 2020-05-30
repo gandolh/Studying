@@ -13,7 +13,6 @@ class Boundary {
         //console.log(this.body);
         World.add(world, this.body);
         this.angularVel= random(-0.05,-0.01) || (0.01,0.05);
-        console.log(this.angularVel);
     }
     rotate(){
     let angle=this.body.angle +this.angularVel;

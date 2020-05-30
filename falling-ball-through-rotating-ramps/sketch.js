@@ -28,7 +28,7 @@ function setup() {
 }
 
 function mousePressed() {
-    boxes.push(new Circle(mouseX, mouseY, 15));
+    circles.push(new Circle(mouseX, mouseY, 15));
 }
 
 function draw() {
