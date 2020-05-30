@@ -17,7 +17,7 @@ class Circle {
         translate(pos.x, pos.y);
         //rotate(angle);
         ellipseMode(CENTER);
-        ellipse(0,0,this.r,this.r);
+        ellipse(0,0,this.r*2,this.r*2);
         pop();
     }
 }
