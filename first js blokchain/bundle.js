@@ -43,11 +43,32 @@ class Block{
         newBlock.hash =  newBlock.calculateHash();
         this.chain.push(newBlock);
      }
+
+     isChainValid(){
+         for(let i=1;i< this.chain.length;i++){
+             const current = this.chain[i];
+             const prev= this.chain[i-1];
+
+             if(current.hash!== current.calculateHash())
+             return false;
+            if(current.previousHash!== prev.hash)
+            return false; 
+         }
+         return true;
+     }
  }
 
  let bCoin= new Blockchain();
+
  for(let i=0;i<=10;i++)
  bCoin.addBlock(new Block(bCoin.chain.length,bCoin.getCurrentDateAsString, {amount:parseInt(Math.random(10))}))
+ 
+console.log('is blockchain valid?' , bCoin.isChainValid())
+
+bCoin.chain[1].data = 'asd';
+bCoin.chain[1].hash=bCoin.chain[1].calculateHash();
+console.log('is blockchain valid?' , bCoin.isChainValid())
+
  console.log(bCoin);
 },{"crypto-js/sha256.js":4}],3:[function(require,module,exports){
 (function (global){(function (){
