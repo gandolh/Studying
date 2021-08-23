@@ -11,17 +11,26 @@ class Block{
         this.data =data;
         this.previousHash = previousHash;
         this.hash = this.calculateHash();
-
+        this.nonce = 0;
 
     }
     calculateHash(){
-        return SHA256(this.index + this.previousHash+ this.timestamp +JSON.stringify(this.data)).toString(); 
+        return SHA256(this.index + this.previousHash+ this.timestamp +JSON.stringify(this.data) + this.nonce).toString(); 
+    }
+
+    mineBlock(difficulty){
+        while(this.hash.substring(0,difficulty) != Array(difficulty+1).join("0")){
+            this.nonce++;
+            this.hash = this.calculateHash();
+        }
+        console.log("Block mined: "+ this.hash)
     }
 }
 
  class Blockchain{
      constructor(){
          this.chain= [this.createGenesisBlock(),];
+         this.difficulty = 2;
      }
      createGenesisBlock(){
         let curentDate= this.getCurrentDateAsString();
@@ -40,7 +49,7 @@ class Block{
      
      addBlock(newBlock){
         newBlock.previousHash = this.getLatestBlock().hash;
-        newBlock.hash =  newBlock.calculateHash();
+        newBlock.mineBlock(this.difficulty);
         this.chain.push(newBlock);
      }
 
@@ -63,13 +72,13 @@ class Block{
  for(let i=0;i<=10;i++)
  bCoin.addBlock(new Block(bCoin.chain.length,bCoin.getCurrentDateAsString, {amount:parseInt(Math.random(10))}))
  
-console.log('is blockchain valid?' , bCoin.isChainValid())
+// console.log('is blockchain valid?' , bCoin.isChainValid())
 
-bCoin.chain[1].data = 'asd';
-bCoin.chain[1].hash=bCoin.chain[1].calculateHash();
-console.log('is blockchain valid?' , bCoin.isChainValid())
+// bCoin.chain[1].data = 'asd';
+// bCoin.chain[1].hash=bCoin.chain[1].calculateHash();
+// console.log('is blockchain valid?' , bCoin.isChainValid())
 
- console.log(bCoin);
+//  console.log(bCoin);
 },{"crypto-js/sha256.js":4}],3:[function(require,module,exports){
 (function (global){(function (){
 ;(function (root, factory) {
