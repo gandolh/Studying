@@ -1,0 +1,3 @@
+
+use the command "browserify main.js -o bundle.js" in terminal
+After that you can import bundle.js in your index.html and run it. It will work :D

@@ -15840,11 +15840,11 @@ const {Transaction} = require('./Transaction')
         if(!transaction.isValid())
             throw new Error('Cannot add invalid transaction to chain')
         
-
+        
         if(this.getBalanceOfAdress(transaction.fromAdress)<transaction.amount)
             throw new Error('Invalid Balance')
 
-            
+
          this.pendingTransactions.push(transaction);
     }
 
@@ -15935,29 +15935,29 @@ const EC= require('elliptic').ec;
 const ec = new EC('secp256k1')
 
 
+
+
 const myKey= ec.keyFromPrivate('ec3c110666905b9c7abef670c3b294aac620db13c7d52c3a29013fd85d45eb27')
 const myWalletAdress = myKey.getPublic('hex');
- let bCoin= new Blockchain();
+let FoxyCoin= new Blockchain();
+console.log(FoxyCoin)
 
-
-for(let i=0;i<=10;i++){
-    const tx= new Transaction(myWalletAdress,'public key goes here', 10);
-    tx.signTransaction(myKey);
-    bCoin.addTransaction(tx); 
-}
-
-
-
-    console.log('\n starting the miner...')
-    bCoin.minePendingTransactions(myWalletAdress);
+//thats how it works
+//  console.log(FoxyCoin.getBalanceOfAdress(myWalletAdress))
  
+//  // console.log('\n starting the miner...')
+//  FoxyCoin.minePendingTransactions(myWalletAdress);
 
-   console.log( bCoin.getBalanceOfAdress(myWalletAdress))
+//  console.log(FoxyCoin.getBalanceOfAdress(myWalletAdress))
 
+// const tx= new Transaction(myWalletAdress,'public key goes here', 10);
+// tx.signTransaction(myKey);
+// console.log(tx)
+// FoxyCoin.addTransaction(tx); 
 
-   bCoin.chain[1].transactions[0].amount=1;
+// FoxyCoin.minePendingTransactions();
+// console.log(FoxyCoin.getBalanceOfAdress(myWalletAdress))
 
-   console.log('is chain Valid?',bCoin.isChainValid());
 
 
 },{"./Blockchain":72,"./Transaction":73,"elliptic":38}]},{},[74]);
