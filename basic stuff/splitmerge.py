@@ -1,8 +1,8 @@
 import cv2 as cv
 import numpy as np
 
-# img = cv.imread('Resources/Photos/cat.jpg')
-img = cv.imread('Resources/Photos/park.jpg')
+# img = cv.imread('../Resources/Photos/cat.jpg')
+img = cv.imread('../Resources/Photos/park.jpg')
 cv.imshow('idk',img )
 
 blank = np.zeros(img.shape[:2],dtype='uint8')

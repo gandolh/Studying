@@ -1,6 +1,6 @@
 import cv2 as cv
 import matplotlib.pyplot as plt
-img = cv.imread('Resources/Photos/group 1.jpg')
+img = cv.imread('../Resources/Photos/group 1.jpg')
 
 # cv.imshow("img",img)
 
