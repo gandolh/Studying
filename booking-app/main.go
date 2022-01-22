@@ -3,6 +3,8 @@ package main
 import (
 	"fmt"
 	"strings"
+
+	"github.com/gandolh/booking-app/helper"
 )
 
 var conferenceName = "Go conference"
@@ -16,7 +18,7 @@ func main() {
 
 	for {
 		firstname, lastname, email, userTickets := getUserInput()
-		isValidName, isValidEmail, isValidTicketNumber := ValidateUserInput(firstname, lastname, email, userTickets)
+		isValidName, isValidEmail, isValidTicketNumber := helper.ValidateUserInput(firstname, lastname, email, userTickets, remainingTickets)
 		if isValidTicketNumber && isValidName && isValidEmail {
 			bookTicket(userTickets, firstname, lastname, email)
 			fmt.Printf("These are first names of bookings are %v\n", GetFirstNames())
@@ -51,14 +53,6 @@ func GetFirstNames() []string {
 		firstNames = append(firstNames, names[0])
 	}
 	return firstNames
-}
-
-func ValidateUserInput(firstname, lastname, email string, userTickets uint) (bool, bool, bool) {
-	isValidName := len(firstname) >= 2 && len(lastname) >= 2
-	isValidEmail := strings.Contains(email, "@")
-	isValidTicketNumber := userTickets > 0 && userTickets <= remainingTickets
-	return isValidName, isValidEmail, isValidTicketNumber
-	// isValidCity= city=="singapore" || city=="london"
 }
 
 func getUserInput() (string, string, string, uint) {
