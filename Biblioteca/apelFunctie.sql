@@ -1,0 +1,1 @@
+﻿select [dbo].[ZileLucratoareInLuna](2021,4)
