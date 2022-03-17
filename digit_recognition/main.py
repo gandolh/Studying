@@ -25,3 +25,14 @@ model.fit(x_train, y_train,epochs = 3)
 loss, accuracy = model.evaluate(x_test,y_test)
 print(accuracy)
 print(loss)
+model.save('saved_model')
+
+for x in range(1,6):
+    img = cv.imread(f'my_samples/{x}.png')[:,:,0]
+    img = np.invert(np.array([img]))
+    prediction =  model.predict(img)
+    print("--------------------------")
+    print(f'The predicted output for {x}.png is {np.argmax(prediction)} ')
+    print("--------------------------")
+    plt.imshow(img[0], cmap = plt.cm.binary)
+    plt.show()
