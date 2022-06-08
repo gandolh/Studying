@@ -1,3 +1,0 @@
-D:/projects/my_github/cpp_study/cmake_project_in_vs/out/build/x64-Debug/CMakeFiles/cmake_project_in_vs.dir
-D:/projects/my_github/cpp_study/cmake_project_in_vs/out/build/x64-Debug/CMakeFiles/edit_cache.dir
-D:/projects/my_github/cpp_study/cmake_project_in_vs/out/build/x64-Debug/CMakeFiles/rebuild_cache.dir
