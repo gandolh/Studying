@@ -23,6 +23,7 @@
     <ClCompile Include="imgui\imgui_widgets.cpp">
       <Filter>imgui</Filter>
     </ClCompile>
+    <ClCompile Include="flota_auto.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="imgui\imgui.h">
@@ -43,12 +44,15 @@
     <ClInclude Include="imgui\imgui_internal.h">
       <Filter>imgui</Filter>
     </ClInclude>
+    <ClInclude Include="flota_auto.h" />
+    <ClInclude Include="Menu.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\README.txt" />
     <None Include="misc\debuggers\imgui.natvis">
       <Filter>imgui</Filter>
     </None>
+    <None Include="db\autovehicule.csv" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="imgui">
