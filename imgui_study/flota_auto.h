@@ -20,6 +20,12 @@ enum AutoturismColumnID
 	AutoturismColumnID_culoare,
 };
 
+enum BtnAction {
+	None,
+	Remove,
+	Update
+};
+
 class Autoturism
 {
 private:
@@ -35,14 +41,20 @@ public:
 	Autoturism();
 	Autoturism(string marca, string model, string tip, string culoare, string numar);
 	~Autoturism();
-	friend void showTable(vector<Autoturism>& items);
+	friend void showTable(vector<Autoturism>& items, BtnAction btn_action);
 	friend void showTable(vector<Autoturism>& items, ImGuiTextFilter& Filter);
 	friend void AddAutovehicul();
+	friend void UpdateTabContent();
 	string getNumar() const;
 	string getMarca() const;
 	string getModel() const;
 	string getTip() const;
 	string getCuloare() const;
+	void setNumar(string) ;
+	void setMarca(string) ;
+	void setModel(string) ;
+	void setTip(string) ;
+	void setCuloare(string) ;
 };
 
 
@@ -128,8 +140,25 @@ string Autoturism::getTip() const {
 	return this->tip;
 }
 
+void Autoturism::setNumar(string a) {
+	this->numar = a;
+}
+void Autoturism::setMarca(string a) {
+	this->marca = a;
+}
+void Autoturism::setModel(string a) {
+	this->model = a;
+}
+void Autoturism::setTip(string a) {
+	this->tip = a;
+}
+void Autoturism::setCuloare(string a) {
+	this->culoare = a;
+}
 
-class FLotaAuto {
+
+
+class FlotaAuto {
 private:
 	vector<Autoturism> static items;
 	static string PathToDB;
@@ -138,10 +167,12 @@ public:
 	void static SaveIntoDB();
 	vector<Autoturism> static& getVector();
 	void static Add(string marca, string model, string tip, string culoare, string numar);
+	void static Remove(int);
+	void static Update(int index,string marca, string model, string tip, string culoare, string numar);
 };
-string FLotaAuto::PathToDB = "db/autovehicule.csv";
-vector<Autoturism> FLotaAuto::items = vector<Autoturism>();
-void FLotaAuto::readFromDB() {
+string FlotaAuto::PathToDB = "db/autovehicule.csv";
+vector<Autoturism> FlotaAuto::items = vector<Autoturism>();
+void FlotaAuto::readFromDB() {
 	items = vector<Autoturism>();
 	std::ifstream auto_csv(PathToDB);
 	//skip header
@@ -149,6 +180,8 @@ void FLotaAuto::readFromDB() {
 	getline(auto_csv, myText);
 	string marca, model, tip, culoare, numar;
 	while (getline(auto_csv, marca, ';')) {
+		if (marca == "\n")
+			continue;
 		getline(auto_csv, model, ';');
 		getline(auto_csv, tip, ';');
 		getline(auto_csv, culoare, ';');
@@ -160,7 +193,7 @@ void FLotaAuto::readFromDB() {
 	auto_csv.close();
 }
 
-void FLotaAuto::SaveIntoDB() {
+void FlotaAuto::SaveIntoDB() {
 	std::ofstream auto_csv(PathToDB);
 	auto_csv << "Marca;Model;Tip;Culoare;Numar;\n";
 	for (Autoturism& item : items)
@@ -173,13 +206,27 @@ void FLotaAuto::SaveIntoDB() {
 }
 
 
-vector<Autoturism>& FLotaAuto::getVector() {
+vector<Autoturism>& FlotaAuto::getVector() {
 	if (items.size() == 0)
 		readFromDB();
 	return items;
 }
 
-void FLotaAuto::Add(string marca, string model, string tip, string culoare, string numar) {
+void FlotaAuto::Add(string marca, string model, string tip, string culoare, string numar) {
 	items.push_back(Autoturism( marca,  model,  tip,  culoare, numar));
-	FLotaAuto::SaveIntoDB();
+	FlotaAuto::SaveIntoDB();
+}
+
+void FlotaAuto::Remove(int index) {
+	items.erase(items.begin()+ index);
+	SaveIntoDB();
+}
+
+void FlotaAuto::Update(int index, string marca, string model, string tip, string culoare, string numar) {
+	items[index].setMarca(marca);
+	items[index].setModel(model);
+	items[index].setTip(tip);
+	items[index].setCuloare(culoare);
+	items[index].setNumar(numar);
+	SaveIntoDB();
 }

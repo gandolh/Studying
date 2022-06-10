@@ -76,7 +76,7 @@ int main(int, char**)
     // - Read 'docs/FONTS.md' for more instructions and details.
     // - Remember that in C/C++ if you want to include a backslash \ in a string literal you need to write a double backslash \\ !
     //io.Fonts->AddFontDefault();
-    io.Fonts->AddFontFromFileTTF("misc/fonts/Roboto-Medium.ttf", 14.0f);
+    io.Fonts->AddFontFromFileTTF("misc/fonts/Roboto-Medium.ttf", 21.0f);
     //io.Fonts->AddFontFromFileTTF("../../misc/fonts/Cousine-Regular.ttf", 15.0f);
     //io.Fonts->AddFontFromFileTTF("../../misc/fonts/DroidSans.ttf", 16.0f);
     //io.Fonts->AddFontFromFileTTF("../../misc/fonts/ProggyTiny.ttf", 10.0f);
@@ -84,12 +84,14 @@ int main(int, char**)
     //im_assert(font != null);
 
     // Our state
-    bool show_demo_window = true;
+    bool show_demo_window = false;
     ImVec4 clear_color = ImVec4(0.45f, 0.55f, 0.60f, 1.00f);
 
     // Main loop
     ImGui::SetNextWindowSize(ImVec2(450, 450));
     ImGui::SetNextWindowPos(ImVec2(50, 50));
+    //initialize for the first time;
+    vector<Autoturism>& items = FlotaAuto::getVector();
     while (!glfwWindowShouldClose(window))
     {
         // Poll and handle events (inputs, window resize, etc.)
@@ -109,7 +111,7 @@ int main(int, char**)
             ImGui::ShowDemoWindow(&show_demo_window);
 
         showAutovehiculeWindow();
-        showFPS(io.DisplaySize);
+        
         // Rendering
         ImGui::Render();
         int display_w, display_h;
