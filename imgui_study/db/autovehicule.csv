@@ -1,10 +1,13 @@
-Marca;Model;Tip;Culoare;Numar
-Subaru;Outback;SUV;Gri;TM 72 ACU
-Toyota;Highlander;SUV;Albastru;B 819 ALB
-Mazda;MX-5;Sport;Rosu;B 243 PAG
-Ford;Mustang;Sport;Gri;TM 89 DOI
-Skoda;Octavia;Sedan;Alb;IS 20 SPT
-Volkswagen;Polo;Hatchback;Galben;GJ 90 BAR
-Toyota;Corolla;Sedan;Verde;B 14 PUR
-Ford;Mondeo;Sedan;Negru;MM 90 RTY
-Honda;City;Sedan;Galben;MM 72 GAB
+Marca;Model;Tip;Culoare;Numar;
+Toyota;Corolla;Sedan;Verde;B 14 PUR;
+Mazda;MX-5;Sport;Rosu;B 243 PAG;
+Toyota;Highlander;SUV;Albastru;B 819 ALB;
+Volkswagen;Polo;Hatchback;Galben;GJ 90 BAR;
+Skoda;Octavia;Sedan;Alb;IS 20 SPT;
+Honda;City;Sedan;Galben;MM 72 GAB;
+Ford;Mondeo;Sedan;Negru;MM 90 RTY;
+Subaru;Outback;SUV;Gri;TM 72 ACU;
+Ford;Mustang;Sport;Gri;TM 89 DOI;
+1;1;1;1;1;
+2;2;2;2;2;
+3;3;3;3;3;

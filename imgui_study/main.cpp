@@ -84,7 +84,6 @@ int main(int, char**)
     //im_assert(font != null);
 
     // Our state
-    MenuWindow active_window = MainScreen;
     bool show_demo_window = true;
     ImVec4 clear_color = ImVec4(0.45f, 0.55f, 0.60f, 1.00f);
 
@@ -109,40 +108,7 @@ int main(int, char**)
         if (show_demo_window)
             ImGui::ShowDemoWindow(&show_demo_window);
 
-      
-        switch (active_window)
-        {
-        case MainScreen:
-            showMainMenu();
-            break;
-        case ViewAll:
-            break;
-        case SearchCar:
-            break;
-        case AddCar:
-            break;
-        case UpdateCar:
-            break;
-        case DeleteCar:
-            break;
-        case Setari:
-            showSettings(show_demo_window, clear_color);
-            break;
-        default:
-            break;
-        }
-        // 2. Show a simple window that we create ourselves. We use a Begin/End pair to created a named window.
-        
-
-        //// 3. Show another simple window.
-        //if (show_another_window)
-        //{
-        //    ImGui::Begin("Another Window", &show_another_window);   // Pass a pointer to our bool variable (the window will have a closing button that will clear the bool when clicked)
-        //    ImGui::Text("Hello from another window!");
-        //    if (ImGui::Button("Close Me"))
-        //        show_another_window = false;
-        //    ImGui::End();
-        //}
+        showAutovehiculeWindow();
         showFPS(io.DisplaySize);
         // Rendering
         ImGui::Render();
