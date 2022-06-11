@@ -98,7 +98,7 @@ const ImGuiTableSortSpecs* Autoturism::s_current_sort_specs = NULL;
 
 Autoturism::Autoturism()
 {
-	this->id = ++last_Id;
+	this->id = ++last_Id;	
 	this->marca = "";
 	this->model = "";
 	this->tip = "";
