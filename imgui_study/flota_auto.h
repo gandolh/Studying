@@ -54,7 +54,9 @@ public:
 	void setMarca(string) ;
 	void setModel(string) ;
 	void setTip(string) ;
-	void setCuloare(string) ;
+	void setCuloare(string);
+	//friend bool operator<(const Autoturism& l, const Autoturism& r);
+	bool operator <(Autoturism& x);
 };
 
 
@@ -88,7 +90,7 @@ const ImGuiTableSortSpecs* Autoturism::s_current_sort_specs = NULL;
 			return (sort_spec->SortDirection == ImGuiSortDirection_Ascending) ? -1 : +1;
 	}
 
-	// qsort() is instable so always return a way to differenciate items.
+	// sort() is instable so always return a way to differenciate items.
 	// Your own compare function may want to avoid fallback on implicit sort specs e.g. a Name compare if it wasn't already part of the sort specs.
 	return (strcmp(a->numar.c_str(), b->numar.c_str()));
 }
@@ -156,7 +158,15 @@ void Autoturism::setCuloare(string a) {
 	this->culoare = a;
 }
 
+//bool operator<(const Autoturism& l, const Autoturism& r)
+//{
+//	return CompareWithSortSpecs(&l, &r) <= 0 ? true : false;
+//}
 
+bool Autoturism::operator <(Autoturism& x)
+{
+	return CompareWithSortSpecs(this, &x) <= 0 ? true : false;
+}
 
 class FlotaAuto {
 private:

@@ -228,7 +228,7 @@ void showTable(vector<Autoturism>& items, ImGuiTextFilter&  Filter ) {
                 sorts_specs->SpecsDirty = false;
                 Autoturism::s_current_sort_specs = sorts_specs;
                 if (items.size() > 1)
-                    qsort(&items[0], (size_t)items.size(), sizeof(items[0]), CompareWithSortSpecs);
+                    sort(items.begin(),items.end());
             }
         for (int i = 0; i < items.size(); i++) {
             Autoturism* item = &items[i];
