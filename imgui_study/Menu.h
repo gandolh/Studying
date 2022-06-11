@@ -296,11 +296,11 @@ void AddAutovehicul() {
     static char tip[256] = "";
     static char culoare[256] = "";
 
-    IMGUI_LEFT_LABEL(ImGui::InputText, "numar  ", numar,128);
-    IMGUI_LEFT_LABEL(ImGui::InputText, "marca  ", marca,128);
-    IMGUI_LEFT_LABEL(ImGui::InputText, "model  ", model,128);
-    IMGUI_LEFT_LABEL(ImGui::InputText, "tip    ", tip,128);
-    IMGUI_LEFT_LABEL(ImGui::InputText, "culoare", culoare,128);
+    IMGUI_LEFT_LABEL(ImGui::InputText, "Numar:  ", numar,128);
+    IMGUI_LEFT_LABEL(ImGui::InputText, "Marca:  ", marca,128);
+    IMGUI_LEFT_LABEL(ImGui::InputText, "Model:  ", model,128);
+    IMGUI_LEFT_LABEL(ImGui::InputText, "Tip:    ", tip,128);
+    IMGUI_LEFT_LABEL(ImGui::InputText, "Culoare:", culoare,128);
     ImGui::PushStyleColor(ImGuiCol_Button, (ImVec4)ImColor::HSV(3 / 7.0f, 0.6f, 0.6f));
     ImGui::PushStyleColor(ImGuiCol_ButtonHovered, (ImVec4)ImColor::HSV(3 / 7.0f, 0.7f, 0.7f));
     ImGui::PushStyleColor(ImGuiCol_ButtonActive, (ImVec4)ImColor::HSV(3 / 7.0f, 0.8f, 0.8f));
@@ -341,11 +341,11 @@ void UpdateTabContent() {
             strcpy(culoare, items[index].culoare.c_str());
         }
         updateWindow.editInitialised = true;
-        IMGUI_LEFT_LABEL(ImGui::InputText, "numar  ", numar, 256);
-        IMGUI_LEFT_LABEL(ImGui::InputText, "marca  ", marca, 256);
-        IMGUI_LEFT_LABEL(ImGui::InputText, "model  ", model, 256);
-        IMGUI_LEFT_LABEL(ImGui::InputText, "tip    ", tip, 256);
-        IMGUI_LEFT_LABEL(ImGui::InputText, "culoare", culoare, 256);
+        IMGUI_LEFT_LABEL(ImGui::InputText, "Numar:  ", numar, 256);
+        IMGUI_LEFT_LABEL(ImGui::InputText, "Marca:  ", marca, 256);
+        IMGUI_LEFT_LABEL(ImGui::InputText, "Model:  ", model, 256);
+        IMGUI_LEFT_LABEL(ImGui::InputText, "Tip:    ", tip, 256);
+        IMGUI_LEFT_LABEL(ImGui::InputText, "Culoare:", culoare, 256);
         ImGui::PushStyleColor(ImGuiCol_Button, (ImVec4)ImColor::HSV(3 / 7.0f, 0.6f, 0.6f));
         ImGui::PushStyleColor(ImGuiCol_ButtonHovered, (ImVec4)ImColor::HSV(3 / 7.0f, 0.7f, 0.7f));
         ImGui::PushStyleColor(ImGuiCol_ButtonActive, (ImVec4)ImColor::HSV(3 / 7.0f, 0.8f, 0.8f));
