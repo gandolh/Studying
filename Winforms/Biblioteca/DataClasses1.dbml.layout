@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DataClasses1">
+  <DataContextMoniker Name="/DataClasses1DataContext" />
+  <nestedChildShapes>
+    <classShape Id="67597e57-d6c3-4ab1-ae34-2217b9dbff78" isExpanded="false" absoluteBounds="0.5, 0.5, 2, 0.45">
+      <DataClassMoniker Name="/DataClasses1DataContext/ABONATI" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c58f457b-88d5-4d5a-8020-e9334f168abd" absoluteBounds="0.51500000000000012, 0.96, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="fdbbdb38-6aa8-47c6-b060-007a6c096ff3" isExpanded="false" absoluteBounds="2.5, 0.5, 2, 0.45">
+      <DataClassMoniker Name="/DataClasses1DataContext/ANGAJATI" />
+      <nestedChildShapes>
+        <elementListCompartment Id="524f5445-1a5e-4efd-80ff-16444abd619e" absoluteBounds="2.5149999999999997, 0.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f80319f4-bb1f-424b-9989-32833265245f" isExpanded="false" absoluteBounds="4.625, 0.5, 2, 0.45">
+      <DataClassMoniker Name="/DataClasses1DataContext/CARTI" />
+      <nestedChildShapes>
+        <elementListCompartment Id="42ebe6f0-95ba-469d-abfb-c1e2c6ab7549" absoluteBounds="4.64, 0.96, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8f6c0356-db1e-4d62-897b-77fab32961ec" isExpanded="false" absoluteBounds="0.5, 1.125, 2, 0.45">
+      <DataClassMoniker Name="/DataClasses1DataContext/NOMSPORURI" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5c9ef40d-0771-4765-b863-ed782c9e1fd9" absoluteBounds="0.51500000000000012, 1.585, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2d594d15-8acb-465c-b7fb-85ee1b8c7e88" isExpanded="false" absoluteBounds="2.625, 1.125, 2, 0.45">
+      <DataClassMoniker Name="/DataClasses1DataContext/PONTAJ" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7203eefe-b1a9-42c7-bb78-4b59b0fe1cfe" absoluteBounds="2.6399999999999997, 1.585, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f763af2b-61e7-4e80-9ed9-bf05cef65471" isExpanded="false" absoluteBounds="4.75, 1.125, 2, 0.45">
+      <DataClassMoniker Name="/DataClasses1DataContext/SALARIZARE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ef5ffede-e82f-4c82-856f-401d7ff1103e" absoluteBounds="4.765, 1.585, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d769d80e-05c1-49e4-a29c-f738c5b3d917" isExpanded="false" absoluteBounds="0.5, 1.75, 2, 0.45">
+      <DataClassMoniker Name="/DataClasses1DataContext/VALSPORURI" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cc84f025-b47b-4896-9ff6-ab8c90399584" absoluteBounds="0.51500000000000012, 2.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cd06493c-e25e-40c2-9d4c-9e686724ca91" isExpanded="false" absoluteBounds="2.75, 1.75, 2, 0.45">
+      <DataClassMoniker Name="/DataClasses1DataContext/usr" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d4c11e47-427c-457c-8d47-9b119b5e43c2" absoluteBounds="2.765, 2.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Biblioteca" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Biblioteca.mdf;Integrated Security=True" SettingsObjectName="Biblioteca.Properties.Settings" SettingsPropertyName="BibliotecaConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.ABONATI" Member="ABONATIs">
+    <Type Name="ABONATI">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ID_CARTI" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="NUME" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="PRENUME" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="CNP" Type="System.Decimal" DbType="Decimal(13,0)" CanBeNull="true" />
+      <Column Name="ADRESA" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="SERIE_CI" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="NR_CI" Type="System.Decimal" DbType="Decimal(6,0)" CanBeNull="true" />
+      <Column Name="DATA_IMPRUMUT" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="DATA_RETURNARE" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="TERMEN_RESTITUIRE" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="NUMAR_RETURNATE" Type="System.Decimal" DbType="Decimal(2,0)" CanBeNull="true" />
+      <Column Name="MOTIV" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="COTA_PENALIZARE" Type="System.Decimal" DbType="Decimal(2,0)" CanBeNull="true" />
+      <Column Name="VALOARE_DE_RESTITUIT" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ANGAJATI" Member="ANGAJATIs">
+    <Type Name="ANGAJATI">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MARCA" Type="System.Decimal" DbType="Decimal(6,0)" CanBeNull="true" />
+      <Column Name="NUME" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="PRENUME" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="CNP" Type="System.Decimal" DbType="Decimal(13,0)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CARTI" Member="CARTIs">
+    <Type Name="CARTI">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TTLU" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="AUTOR" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="DATA_PUBLICARE" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="NR_EXEMPLARE" Type="System.Decimal" DbType="Decimal(4,0)" CanBeNull="true" />
+      <Column Name="PRET" Type="System.Decimal" DbType="Decimal(6,2)" CanBeNull="true" />
+      <Column Name="STARE" Type="System.Decimal" DbType="Decimal(1,0)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NOMSPORURI" Member="NOMSPORURIs">
+    <Type Name="NOMSPORURI">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="COD_SPOR" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="DENUMIRE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PONTAJ" Member="PONTAJs">
+    <Type Name="PONTAJ">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ID_SALARIZARE" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ZL_IN_LUNA" Type="System.Decimal" DbType="Decimal(2,0)" CanBeNull="true" />
+      <Column Name="ZEF_LUCRATE" Type="System.Decimal" DbType="Decimal(2,0)" CanBeNull="true" />
+      <Column Name="ZILE_CO" Type="System.Decimal" DbType="Decimal(2,0)" CanBeNull="true" />
+      <Column Name="ZILE_INV" Type="System.Decimal" DbType="Decimal(2,0)" CanBeNull="true" />
+      <Column Name="ZILE_NEM" Type="System.Decimal" DbType="Decimal(2,0)" CanBeNull="true" />
+      <Column Name="ZILE_MED" Type="System.Decimal" DbType="Decimal(2,0)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SALARIZARE" Member="SALARIZAREs">
+    <Type Name="SALARIZARE">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ID_ANGAJAT" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="FUNCTIA" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="LOCMUNCA" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="SALBAZA" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="SALEFECTIV" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="SALBRUT" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="[VENITNET ]" Member="VENITNET_" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="[SALARIUNET ]" Member="SALARIUNET_" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="RESTPLATA" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="RESTCARD" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="LUNA" Type="System.Decimal" DbType="Decimal(2,0)" CanBeNull="true" />
+      <Column Name="ANUL" Type="System.Decimal" DbType="Decimal(4,0)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VALSPORURI" Member="VALSPORURIs">
+    <Type Name="VALSPORURI">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ID_SPOR" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="VALOARE_CALCULATA" Type="System.Decimal" DbType="Decimal(8,2)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.usr" Member="usrs">
+    <Type Name="usr">
+      <Column Name="nume_utilizator" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="parola" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
