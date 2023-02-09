@@ -1,1 +1,0 @@
-folositi x86 debug version
