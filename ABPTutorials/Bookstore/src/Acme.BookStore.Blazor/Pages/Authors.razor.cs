@@ -19,7 +19,6 @@ namespace Acme.BookStore.Blazor.Pages
         private int CurrentPage { get; set; }
         private string CurrentSorting { get; set; }
         private int TotalCount { get; set; }
-
         private bool CanCreateAuthor { get; set; }
         private bool CanEditAuthor { get; set; }
         private bool CanDeleteAuthor { get; set; }
