@@ -5,72 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8dcf209e-c0b6-475a-9f20-421f4bd9ff70" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../BroCode/CodeBro/CodeBro.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BroCode/CodeBro/src/Audio.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BroCode/CodeBro/src/BorderLayoutDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BroCode/CodeBro/src/ButtonFrame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BroCode/CodeBro/src/ButtonsDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BroCode/CodeBro/src/Checkbox/CheckboxDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BroCode/CodeBro/src/Checkbox/CheckboxFrame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BroCode/CodeBro/src/ColorChooserDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BroCode/CodeBro/src/ComboboxDemo/ComboBoxDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BroCode/CodeBro/src/ComboboxDemo/ComboBoxFrame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BroCode/CodeBro/src/DialogBoxDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BroCode/CodeBro/src/DragAndDropDemo/DragPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BroCode/CodeBro/src/DragAndDropDemo/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BroCode/CodeBro/src/DragAndDropDemo/MyFrame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BroCode/CodeBro/src/FileChooserDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BroCode/CodeBro/src/FlowLayoutDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BroCode/CodeBro/src/Game/Game.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BroCode/CodeBro/src/Game/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BroCode/CodeBro/src/GraphicsDemo/GraphicsDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BroCode/CodeBro/src/GraphicsDemo/GraphicsPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BroCode/CodeBro/src/GridLayoutDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BroCode/CodeBro/src/JFrameDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BroCode/CodeBro/src/KeyEventsDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BroCode/CodeBro/src/LabelDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BroCode/CodeBro/src/LayeredPaneDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BroCode/CodeBro/src/MenuBarDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BroCode/CodeBro/src/MouseEventsDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BroCode/CodeBro/src/MyFrame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BroCode/CodeBro/src/OpenNewGUIWindow/LaunchPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BroCode/CodeBro/src/OpenNewGUIWindow/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BroCode/CodeBro/src/OpenNewGUIWindow/NewWindow.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BroCode/CodeBro/src/PanelsDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BroCode/CodeBro/src/ProgressBarDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BroCode/CodeBro/src/RadioButtonsDemo/RadioButtonsDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BroCode/CodeBro/src/RadioButtonsDemo/RadioButtonsFrame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BroCode/CodeBro/src/SliderDemo/SliderDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BroCode/CodeBro/src/TextFieldDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BroCode/CodeBro/src/TextFieldFrame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BroCode/CodeBro/src/ThreadsDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BroCode/CodeBro/src/TimerDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BroCode/CodeBro/src/TwoDAnimationDemo/AnimationFrame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BroCode/CodeBro/src/TwoDAnimationDemo/AnimationPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BroCode/CodeBro/src/TwoDAnimationDemo/TwoDAnimationDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/JavaFxStudy.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_8_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_8_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_8_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_8_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_base_19_ea_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_base_win_19_ea_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_controls_19_ea_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_controls_win_19_ea_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_fxml_19_ea_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_fxml_win_19_ea_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_graphics_19_ea_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_graphics_win_19_ea_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

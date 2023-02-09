@@ -135,10 +135,10 @@ public class Main extends Application {
 //            stage.show();
 
             //Menu bar demo
-//            Parent root = FXMLLoader.load(getClass().getResource("MenuBarDemo.fxml"));
-//            Scene scene = new Scene(root);
-//            stage.setScene(scene);
-//            stage.show();
+            Parent root = FXMLLoader.load(getClass().getResource("MenuBarDemo.fxml"));
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
 
             //Flow pane demo
 //            Parent root = FXMLLoader.load(getClass().getResource("FlowPaneDemo.fxml"));

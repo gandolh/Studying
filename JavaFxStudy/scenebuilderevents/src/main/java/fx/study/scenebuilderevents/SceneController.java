@@ -15,8 +15,8 @@ public class SceneController {
     private Parent root;
 
     public void switchToScene1(ActionEvent event) throws IOException {
-         root = FXMLLoader.load(getClass().getResource("Scene1.fxml"));
-         stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+        root = FXMLLoader.load(getClass().getResource("Scene1.fxml"));
+        stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
