@@ -1,0 +1,17 @@
+﻿{
+  "Name": "Edge Formular opționale",
+  "Type": "Screen",
+  "TaxonomyType": "Screen",
+  "Id": "nSNXc6BE6kuz1C5SGiOKCQ",
+  "Reference": "5m3w0gTkb02eBodl0vAvwg/nSNXc6BE6kuz1C5SGiOKCQ",
+  "ParentRef": "5m3w0gTkb02eBodl0vAvwg/4Hg_EishAUmG0C-98ChDLQ",
+  "Created": "2023-12-09T19:52:10.5465319Z",
+  "Updated": "2023-12-09T19:52:31.7219139Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=23.10.6.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

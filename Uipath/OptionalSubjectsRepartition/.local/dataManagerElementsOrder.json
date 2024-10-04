@@ -1,0 +1,139 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "CreareFormular/ExtractNewFormData.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "header&Sequence_5",
+        "cellValue&Sequence_5",
+        "DisciplineDt&Sequence_3",
+        "maxRows&Sequence_3",
+        "maxCols&Sequence_3"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "DisciplineDict",
+        "formTitle",
+        "formDescription"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "SelectedOption&Sequence_1",
+        "EmailList&Sequence_1",
+        "sendingFormsCount&Sequence_1",
+        "DisciplineList&Sequence_1",
+        "UrlCreatedForm&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "CreareFormular/CreareFormular.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "headers&Sequence_2",
+        "selectorTemplate&Sequence_2",
+        "DisciplineDict&Sequence_2",
+        "formDescription&Sequence_2",
+        "formTitle&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "UrlCreatedForm"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "SendForms/DoSendNForms.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "list22&Sequence_7",
+        "ToBeClickedSelectors11&Sequence_7",
+        "ToBeClickedSelectors12&Sequence_7",
+        "ToBeClickedSelectors21&Sequence_7",
+        "ToBeClickedSelectors22&Sequence_7"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "formsUrl",
+        "sendingFormsCount"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "SendForms/PickOptionale11.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "list11&Sequence_1",
+        "randomValue&Sequence_1",
+        "toBeClickedSelector111&Sequence_1",
+        "toBeClickedSelector112&Sequence_1",
+        "toBeClickedSelector113&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "ToBeClickedSelectors11"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "PregatireDate/PregatireDate.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "EmailList"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "RepartizareRezultate/RepartizareRezultate.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "WorkbookAddress&Sequence_1",
+        "FoaieRăspunsuri&Sequence_1",
+        "rowIndex&Sequence_2",
+        "emailAddress&Sequence_4",
+        "rnd&Sequence_6",
+        "emailAddress&Sequence_7",
+        "emailAddress&Sequence_10",
+        "medieAnPrecedent&Sequence_10",
+        "dtExcelDataRaspunsuri&Sequence_14",
+        "headersList&Sequence_14",
+        "dtExcelDataRepartizari&Sequence_14",
+        "emailAddress&Sequence_15",
+        "priorityOfDiscipline&Sequence_16",
+        "Disciplina&Sequence_17",
+        "columnIndex&Sequence_17"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "DisciplineList"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "TrimitereEmailuri/TrimitereEmailuri.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "StudentEmails&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryScreenData ContentHash="HS00IuD7RUWh7wJNlB9cyQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryScreenData.Data>
+    <TargetApp x:Key="TargetApp" Area="-8, -8, 1936, 1048" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAA4SURBVDhPY0i32n4AiP+TifeDDMAmQTQeZAbAADIbG0DWQ10DyMGjXhh0XiAHU8WA/eiCxOPtuwEl0a7qam5sogAAAABJRU5ErkJggg==" Selector="&lt;html app='msedge.exe' title='Formular opționale' /&gt;" Title="Formular opționale" Url="https://docs.google.com/forms/d/e/1FAIpQLSeZA4DZZcFiyBGNqlEyNhFTJQMxzX4ZmB5OuQiD1k_sW58BIw/viewform">
+      <imageRef attrName="InformativeScreenshot" originalValue="cd87b0ddf37efa5fd103befb03d65749.jpg" xmlns="">00QmRiwghX0GX_1l6EUdXKg</imageRef>
+    </TargetApp>
+  </ObjectRepositoryScreenData.Data>
+</ObjectRepositoryScreenData>

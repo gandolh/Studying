@@ -1,0 +1,528 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="CreareFormular" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="BreakTriggerScopeInArgument" Type="InArgument(x:String)" />
+    <x:Property Name="UrlCreatedForm" Type="OutArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1206,11296</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>CreareFormular_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <sap:WorkflowViewStateService.ViewState>
+    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+      <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
+    </scg:Dictionary>
+  </sap:WorkflowViewStateService.ViewState>
+  <Sequence DisplayName="CreareFormular" sap:VirtualizedContainerService.HintSize="731,11231" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: Formulare Google" sap:VirtualizedContainerService.HintSize="669,11120" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="1242dc5b-c3bc-4238-bc14-30be0f958f8a" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="635,10902" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="formTitle" />
+              <Variable x:TypeArguments="x:String" Name="formDescription" />
+              <Variable x:TypeArguments="scg:Dictionary(x:String, scg:List(x:String))" Name="DisciplineDict" />
+              <Variable x:TypeArguments="x:String" Name="selectorTemplate" />
+              <Variable x:TypeArguments="scg:List(x:String)" Name="headers" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="CreareFormular\ExtractNewFormData.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="573,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="CreareFormular\ExtractNewFormData.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <OutArgument x:TypeArguments="x:String" x:Key="formTitle">[formTitle]</OutArgument>
+                <OutArgument x:TypeArguments="x:String" x:Key="formDescription">[formDescription]</OutArgument>
+                <OutArgument x:TypeArguments="scg:Dictionary(x:String, scg:List(x:String))" x:Key="DisciplineDict">[DisciplineDict]</OutArgument>
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'DIV docs-homescreen-add'" sap:VirtualizedContainerService.HintSize="573,158" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="1242dc5b-c3bc-4238-bc14-30be0f958f8a" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://docs.google.com/forms/u/0/?tgif=d&amp;ec=asw-forms-hero-goto" CvElementArea="1748, 919, 80, 79" CvTextArea="1769, 940, 37, 36" CvType="Icon" DesignTimeRectangle="1754, 924, 70, 70" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;webctrl aria-label='Creează un formular' aria-role='button' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-label='Creează un formular' aria-role='button' tag='DIV' type='' class='goog-inline-block jfk-button jfk-button-flat jfk-button-narrow docs-homescreen-fab' aaname='' /&gt;" Guid="75f4e1e9-4649-4f48-8e90-dad07b9b60a6" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEoAAABKCAYAAAAc0MJxAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAjwSURBVHhe5ZzLbhRHFIZ7k0fImySbJFKkXBZZoyyjKKwS5RmSLBKUdZR1sk02RFmCbxgEJoC5GXM1vmADBoPxBRsMHtPRd8TfOl1uz/TA2FWeOVKJ8Ux11fm/PnXqdPcM2atXr3La1tZWqTUajVLb3Nws2suXL4v24sWLoj1//rxoz549K9r6+nqpPX36tNRWV1ebtrB/OJ6fy/vgffM+ey2hzpCD+Bio8EN/oB+U1gyQd9gLkUAvfmVlpWjLy8tNm+/rx6gC531oBizU5TWHPAxU+KY/wA+kCTykZoDW1tZKcDwQ/qbPxsaGjSfncEimE8hn9KEvx3CsB6jxmYs5Nb/3KQTmtXiNXrtnQiuB8h39ABo0BOQhtYLD5xzrYbypMQZjMWYraCEsmnS0A6sA5Tv4A3eC1AwQji8tLdl7HLPbxhzMxZzMXQeY9NSFZaD8B/4AD4nQDyHhBC0ExHuMtdfGnMwdApOfISw01YWV+Td8xypIISBFkY8gxolt+BBGmKIrBFYXVgHKdwgBVUFicvICztDon5rhk/xTDquCFQLzLEqg/Ac7QVIuoilJP3nyxM5UJxL0bhm+4SO+4jO+S4dyVx1YmX+DDrSdIPkoYmI+3y+Gr/gcRlcVLHHwbApQrSAxOI3JFhcXk1xqrQyf8R0N0lMXloHykARqJ0g0jtmvhu/SsRMscfCwsl6CJHsTWAbKQ6JVQSJkuwGSDC07LUNx8LCycIcTJJKddrZHjx7ty5zUytCENjSq3qqCRb9M1JpBIhy71dDWDJb4GChBolFzEIZso48fP7bX3W5oRKtKBxiIh2BlvFDypoOiiQNpKReTnTI0Sq+iSrCU3A2U6AkSSe7hw4fWoVcMrWhGu2CJi4Hy0UQH5SXCsNcMzT5f+ajKBIm1yYd0fPDggW2JvWZoRjsMYOHzVRbucgsLC/a6Vw3tMAh3QQMFOS25+fn5KNG0MTyQL359YFvba0M7DLQEYWOgwgTOvzEMUAufvl9qq7/++PrTvTXPQlGVhdFE4ophKYGCQRhVmY8mElksSwkUBgsfVZm2RAjGWnZYaqBgoaiCUaZoun//vm2DsSw1ULCAiaLKQBFmd+/etccysSw1ULCACWwMFKHFH4RZTEsNFAYT2MAoo7i6d++eXRDGtBRBwQQ2MMogNjc3Z5k9pqUICiawgVFGeM3OzkZN5FiKoGACGxgZqJmZGbs5FdNSBAUT2Bgo1iB/dPrBwdb8X221iT9/2gZq7vsv84HxzbZaJw0msIGRgZqamur4nczG6Mf55sA7tdv67++WIM0c/Cj/5NBa262TBhPYGCiS1e3bt19/1Dl7G1DTBz/MP/t5tRJEq9Zpgw2MkgM1A6RfVioh1GmdthKoW7duJbH0Zr75IP/80FIlgLqtkwYT2BioO3fu2B+dTuaA2hr/qnb7548v8u8O9+XfHh4stUP/brTVOmkwgQ2MDNTExET0Jy79syP5e38fKLUf/vvt9adxDCawKYHiLl5MSxEUTLaBin2tlyIomBSgKNFZh9xSiGkpgoIJbGBkoKC2GyVCO5YiKJjAxkCx9fHH+Pi4fakzlqUGChYwgU1RR0Hu6tWrUR+jpwYKFjApCk7WIdcz169ft6QVy1IDBQuYwAZGdlE8PT2d37x500ItlqUGChYwgY1dFPOkgVsJvDk2NmYP/GJYSqBgAAuYwAZGxR1OkpbWZAxLCZRytnY8u3HHcyuS1eTkZH7t2rX8woULUW4LpwIK7TCABUxgAyMDpYROqF2+fNle96qhHQawUCI3UDyKIbR0KUMSGx0djf6wIYahGe2qn2ACG3tcxcM9LT/WJlvixYsXrXTvNUMz2mGg+gk29gDUf/dAu9+VK1fyc+fORb9Q3ktDK5rR7nc72NgjdX03iod8fvcjoUE35vcR9srQiFY0+91Oj9NhZF/7gSZvkrhUfFJHQJiDut3QiFbVTjCABUxgY1/70TfufFL3uer06dMWgt1qaEOjz00+icPGvnHHXTwfVf6ShvXKLnDq1KloFftuGprQhkblJl2y+Giy73D6L+IrqlSA3rhxI7906VJ+5swZo07fbjG0oAltaESrCkwfTbChr4HyUUWWhyhZn7VLhaolePbs2a6or9CAFi05NKIVzWiHgY8mA8VBvPC5irCDrKp1CrDz58/nIyMjdgbov18N39GAFjTpLgFa0Yx2n5voDyMD5X+94OsqtkiSG2GpfMUErGv67TfDZ3xHg/IS2tCIVl83wQImsDFQPLvysCDpl6DfBbkGUnIfHh62M7BfDF/xWckbLX6X80sOBh6S/bpKP2wUKMINooJFPaF8JVjUHJyVY8eO2fqOea+9leEbPuIrPuO7ICkv6cIXzWiHgUDBxn7YKFBVS5CqlB1AsLgWYgIVo0yss8TaTs3wSdEvSPiOBrQIEhrRWrXkClD+x9dVsHzJIFicISYkhNk5Tpw4kQ8NDdmZ4tjYhg/4gk/4ho/4is/4LkhoUinQDJL9+JpfEwkUjU40wo8DCccQlpYhyZDtlV3k5MmTFt4DAwO2k8QAxpzMjQ/4gk/4ho/46pebh4RGtKJZ+sUDNjAq/QcRfMAPZuioksHXVyobSH5MqNKBgo26hPDmDOJkf3+/XWTizG4bczAXczI3PuALPuGbSgB8xnc0oEV5CY1oRTPaYeAhGSiSXV1Y0GcC7YZUsjhAOBPqOKsa5fjx4wUw/uWMIoh53tYYg7EY08/BnMyND/iCT/iGj/iq3Q0NiqQ6kGBUAuXzVStYqrO4NuJMUY9wiwLnKOQETBFGvujr68uPHDliCRaRFHmMxfjM62/p8Jr3+Iw+9OUYjmUMxmJMxlYEMSdz4wO+4BO+4aPqpLqQYLENVDuwtBsKlnZERRd5QMsRp3WpgEBFGQIHBwctlxw9etSEN2v0oS/HCA5jMaYurZhLywwfFEX4ho+CpN2tHUglUCEsDhIsdgAGJFlqN2RCzgxLgHBWog+BsdOQTD00zj6Jlkhg60a4APqm9+lDX47hWA+HsZmjChA+4Rs+4mtYAqAJbYJEq4LUaDTy/wHm6Av96YBNDwAAAABJRU5ErkJggg==" InformativeScreenshot="ba2800b9f1a28b0ab7c9a0a8ec6cc7fa.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Formulare Google' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CvTextArea="553, 263, 75, 20" CvTextArgument="Cautare" CvType="Text" DesignTimeRectangle="472, 244, 925, 60" FullSelectorArgument="&lt;webctrl class='gb_ye' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl class='gb_ye' tag='DIV' type='' aaname='' /&gt;" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Formular fără titlu'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="573,219" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="1242dc5b-c3bc-4238-bc14-30be0f958f8a" Text="[formTitle]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://docs.google.com/forms/d/1pQXbbX9r-K6N8WN3zSuCzuuG0Yhci3kQe_HJ6XsEe4o/edit?pli=1" CvTextArea="87, 152, 145, 16" CvTextArgument="Formular fara titlu" CvType="Text" DesignTimeRectangle="88, 146, 154, 29" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' class='Hvn9fb zHQkBf' aaname='' /&gt;" Guid="7940b9fb-08d3-4439-8691-bfd5990e5775" InformativeScreenshot="81589e3c811bfb7e28b5c394d7be997f.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Formular fără titlu - Formulare Google' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CvElementArea="31, 136, 36, 45" CvType="Icon" DesignTimeRectangle="36, 139, 29, 40" ElementType="Icon" FullSelectorArgument="&lt;webctrl tag='path' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='path' type='' class='st2' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACEAAAAsCAYAAADretGxAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFfSURBVFhH7ZY9SwNBEIb9Vba2sbAK2KaJnYik8A+YSrC0spIIwV+QxDKlVmLpVYJoE0uryMq7ZI5lncWZuHMfcC885Dbczj65C7O74xqQ7BLr9ffmSp5SonhauauzRzfqLf7F+XDm3l8/N1Vl8RKrjy+24DYc70/dSf9aJeIlFrcFW3Abhns37nD3QiViJqERMZWQiphLSEQqkfhLpDIJkBLJLnF6cMcKEJxIdonx0YxdPCQWyS4hZT558QJIbRJYk9JJUNohMZ8UfpcdD5Z+jM+H+zcxqeOBSoICGYxRVJMsEvGTQFEcgKTQvBiVhBXtk8DjjN8rvpMSzgtRSVCml89+XPkfE7+EUpsEgEhYiMZSwlohKgkr2ifBtW2uKaVIvRKVBKVxbZvbqFLQvBiVhBWdBNFJEJ0E0UwJNBXuRkt+SSCpzmYB1gpTSmCzwcEFN1iCNbBWmFKizjRAwrkf0+mDFEPKI5oAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Formular fără titlu'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="573,219" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="1242dc5b-c3bc-4238-bc14-30be0f958f8a" Text="[formTitle]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://docs.google.com/forms/d/1_luZ0RC-UheTTcjaMWk9aGqAChOR4jsZNHZd_wx4msk/edit" CvTextArea="587, 278, 255, 29" CvTextArgument="Formular fara titlu" CvType="Text" DesignTimeRectangle="588, 274, 720, 48" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl aria-role='textbox' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='textbox' tag='DIV' type='' class='T2Ybvb KRoqRc editable' aaname='Formular fără titlu' /&gt;" Guid="a82ab7ee-69e4-44b5-b738-25c6d11b2d9a" InformativeScreenshot="2927347c628e083190a052cbbdb2c506.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Formular fără titlu - Formulare Google' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CvElementArea="830, 197, 77, 33" CvTextArea="840, 204, 58, 15" CvTextArgument="Intrebari" CvType="Button" DesignTimeRectangle="829, 195, 80, 36" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Întrebări' parentid='tJHJj' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Întrebări' parentid='tJHJj' tag='SPAN' type='' class='kx3Hed VZhFab' check:innerText='Întrebări' /&gt;" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Întrebări'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="573,219" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="1242dc5b-c3bc-4238-bc14-30be0f958f8a" Text="[formDescription]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://docs.google.com/forms/d/1_luZ0RC-UheTTcjaMWk9aGqAChOR4jsZNHZd_wx4msk/edit" CvTextArea="587, 336, 154, 15" CvTextArgument="Descrierea formularului" CvType="Text" DesignTimeRectangle="588, 334, 720, 22" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl aria-label='Descrierea formularului' aria-role='textbox' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-label='Descrierea formularului' aria-role='textbox' tag='DIV' type='' class='T2Ybvb KRoqRc editable' aaname='' /&gt;" Guid="79a6ecee-a501-4b55-8f7b-3d333b804880" InformativeScreenshot="b3b7d1085523ac71fd0e6064f56162b5.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Formular fără titlu - Formulare Google' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CvElementArea="830, 197, 77, 33" CvTextArea="840, 204, 58, 15" CvTextArgument="Intrebari" CvType="Button" DesignTimeRectangle="829, 195, 80, 36" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Întrebări' parentid='tJHJj' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Întrebări' parentid='tJHJj' tag='SPAN' type='' class='kx3Hed VZhFab' check:innerText='Întrebări' /&gt;" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Întrebare fără'" sap:VirtualizedContainerService.HintSize="573,158" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="1242dc5b-c3bc-4238-bc14-30be0f958f8a" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://docs.google.com/forms/d/1uawWrc5Jrtcvjo2O2poEoiuq6pW1R0E-dyCyZSreL9s/edit" DesignTimeRectangle="564, 434, 768, 128" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='9' parentid='SchemaEditor' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='gk8i6' parentid='SchemaEditor' tag='DIV' aaname='' check:innerText='Întrebare fără titlu&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;' /&gt;" Guid="68618f9a-63b4-4f35-b6fc-edb469a4738e" InformativeScreenshot="8944dd02b70c34791aaf0df4f83d25e0.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Formular fără titlu - Formulare Google' /&gt;" SearchSteps="FuzzySelector" Version="V3" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <ui:ForEach x:TypeArguments="x:Int32" CurrentIndex="{x:Null}" DisplayName="Creating the form sections" sap:VirtualizedContainerService.HintSize="573,1497" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[Enumerable.Range(0,DisciplineDict.Keys.Count() - 1)]">
+              <ui:ForEach.Body>
+                <ActivityAction x:TypeArguments="x:Int32">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:Int32" Name="keyIndex" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="452,1309" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Răspunsuri multiple'" sap:VirtualizedContainerService.HintSize="410,158" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="1242dc5b-c3bc-4238-bc14-30be0f958f8a" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="https://docs.google.com/forms/d/1pQXbbX9r-K6N8WN3zSuCzuuG0Yhci3kQe_HJ6XsEe4o/edit?pli=1" CvTextArea="1011, 440, 129, 17" CvTextArgument="Raspunsuri multiple" CvType="Text" DesignTimeRectangle="964, 425, 343, 48" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl aria-role='option' tabindex='0' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='option' tabindex='0' tag='DIV' type='' class='MocG8c HZ3kWc LMgvRb KKjvXb' aaname='' check:innerText='Răspunsuri multiple' /&gt;" Guid="bb94ce2f-2c80-435d-a063-4d5e5f844ac8" InformativeScreenshot="14a1b772c650ff3290262bedd7770ed3.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Formular fără titlu - Formulare Google' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target CvElementArea="585, 421, 316, 63" CvType="InputBox" DesignTimeRectangle="588, 424, 311, 56" ElementType="InputBox" FullSelectorArgument="&lt;webctrl aria-label='Întrebare' aria-role='textbox' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-label='Întrebare' aria-role='textbox' tag='DIV' type='' class='T2Ybvb KRoqRc editable' aaname='Întrebare fără titlu' /&gt;" SearchSteps="FuzzySelector, CV" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Grilă cu'" sap:VirtualizedContainerService.HintSize="410,158" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="1242dc5b-c3bc-4238-bc14-30be0f958f8a" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="https://docs.google.com/forms/d/1pQXbbX9r-K6N8WN3zSuCzuuG0Yhci3kQe_HJ6XsEe4o/edit?pli=1" CvTextArea="1011, 713, 173, 14" CvTextArgument="Grila cu mai multe variante" CvType="Text" DesignTimeRectangle="964, 698, 345, 48" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl aria-role='option' idx='7' tabindex='-1' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='option' type='' tabindex='-1' tag='DIV' class='MocG8c HZ3kWc LMgvRb KKjvXb' aaname='' check:innerText='Grilă cu mai multe variante' /&gt;" Guid="35c03eee-6b72-45c4-8f0a-aebf4c8fe284" InformativeScreenshot="c28ed335708ae421ff8e2e9110162c05.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Formular fără titlu - Formulare Google' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive" />
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'msedge.exe Formular'" sap:VirtualizedContainerService.HintSize="410,158" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="1242dc5b-c3bc-4238-bc14-30be0f958f8a" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="https://docs.google.com/forms/d/1pQXbbX9r-K6N8WN3zSuCzuuG0Yhci3kQe_HJ6XsEe4o/edit?pli=1" CvElementArea="1357, 413, 25, 24" CvType="Icon" DesignTimeRectangle="1355, 411, 29, 28" DesignTimeScaleFactor="1" ElementType="Icon" Guid="176d285a-32d5-4e42-b98c-c693cf7b2633" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAB0AAAAcCAYAAACdz7SqAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFESURBVEhL7ZNBSgNBEEW9aRZu3GeRRQ4guPACQiAnCEJuoHgF9QzJHVpe4Esx/KruxASF+KBhmOnp17+r+qb9Av/Si/L3pe8fn23zvG33D49tdnvX5otle1qtD+/4NsqQdLfbf4uqwSaY26MrJUVcNKZCwPPL69vhW5xTUUqjsLcQGxidn0pZRAscUy/9R+Lsv1SqGmY71oYcSozYYaXUqPoJKilptWmX1kq1U+QZlRS0hjspK+Xu/VRKQr6TeIqVqv05JiFJb4jYUFMuJgX3Dqy0agKRLSjUjJRqStlIrgnEqHS4kdQEp14Z0Gm5ZrTSeM/c8UAl1Um5zgUrhdh91dWZolNiZD2RSkF1QVzVVygho5pfSkkbF1JqJeA7z8zRNesJoZSKWONqIGZujyEpKBVJaS4EDDZDsqx+jmHpObkWaWtfDPab778V240AAAAASUVORK5CYII=" InformativeScreenshot="81d6761c98c3379d86fdb95782873060.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Formular fără titlu - Formulare Google' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V3" Visibility="Interactive" />
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                    <If Condition="[keyIndex.Equals(DisciplineDict.Keys.Count() - 2)]" sap:VirtualizedContainerService.HintSize="410,627" sap2010:WorkflowViewState.IdRef="If_1">
+                      <If.Then>
+                        <Sequence sap:VirtualizedContainerService.HintSize="376,444" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Răspunsuri multiple'" sap:VirtualizedContainerService.HintSize="334,158" sap2010:WorkflowViewState.IdRef="NClick_8" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="1242dc5b-c3bc-4238-bc14-30be0f958f8a" Version="V3">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable BrowserURL="https://docs.google.com/forms/d/1pQXbbX9r-K6N8WN3zSuCzuuG0Yhci3kQe_HJ6XsEe4o/edit?pli=1" CvTextArea="1011, 440, 129, 17" CvTextArgument="Raspunsuri multiple" CvType="Text" DesignTimeRectangle="964, 425, 343, 48" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl aria-role='option' tabindex='0' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='option' tabindex='0' tag='DIV' type='' class='MocG8c HZ3kWc LMgvRb KKjvXb' aaname='' check:innerText='Răspunsuri multiple' /&gt;" Guid="bb94ce2f-2c80-435d-a063-4d5e5f844ac8" InformativeScreenshot="14a1b772c650ff3290262bedd7770ed3.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Formular fără titlu - Formulare Google' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
+                                <uix:TargetAnchorable.Anchors>
+                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                    <uix:Target CvElementArea="585, 421, 316, 63" CvType="InputBox" DesignTimeRectangle="588, 424, 311, 56" ElementType="InputBox" FullSelectorArgument="&lt;webctrl aria-label='Întrebare' aria-role='textbox' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-label='Întrebare' aria-role='textbox' tag='DIV' type='' class='T2Ybvb KRoqRc editable' aaname='Întrebare fără titlu' /&gt;" SearchSteps="FuzzySelector, CV" />
+                                  </scg:List>
+                                </uix:TargetAnchorable.Anchors>
+                              </uix:TargetAnchorable>
+                            </uix:NClick.Target>
+                          </uix:NClick>
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Grilă cu'" sap:VirtualizedContainerService.HintSize="334,158" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="1242dc5b-c3bc-4238-bc14-30be0f958f8a" Version="V3">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable BrowserURL="https://docs.google.com/forms/d/1pQXbbX9r-K6N8WN3zSuCzuuG0Yhci3kQe_HJ6XsEe4o/edit?pli=1" CvTextArea="1011, 713, 173, 14" CvTextArgument="Grila cu mai multe variante" CvType="Text" DesignTimeRectangle="964, 698, 345, 48" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl aria-role='option' idx='7' tabindex='-1' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='option' type='' tabindex='-1' tag='DIV' class='MocG8c HZ3kWc LMgvRb KKjvXb' aaname='' check:innerText='Grilă cu mai multe variante' /&gt;" Guid="35c03eee-6b72-45c4-8f0a-aebf4c8fe284" InformativeScreenshot="c28ed335708ae421ff8e2e9110162c05.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Formular fără titlu - Formulare Google' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive" />
+                            </uix:NClick.Target>
+                          </uix:NClick>
+                        </Sequence>
+                      </If.Then>
+                      <If.Else>
+                        <Sequence sap2010:WorkflowViewState.IdRef="Sequence_7" />
+                      </If.Else>
+                    </If>
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEach.Body>
+            </ui:ForEach>
+            <Assign sap:VirtualizedContainerService.HintSize="573,83" sap2010:WorkflowViewState.IdRef="Assign_3">
+              <Assign.To>
+                <OutArgument x:TypeArguments="scg:List(x:String)">[headers]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="scg:List(x:String)">[DisciplineDict.Keys.ToList()]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <ui:ForEach x:TypeArguments="x:Int32" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="573,5427" sap2010:WorkflowViewState.IdRef="ForEach`1_5" Values="[Enumerable.Range(0, headers.Count)]">
+              <ui:ForEach.Body>
+                <ActivityAction x:TypeArguments="x:Int32">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:Int32" Name="indexVarianta" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="539,5239" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Switch x:TypeArguments="x:Int32" DisplayName="Switch" Expression="[indexVarianta]" sap:VirtualizedContainerService.HintSize="497,3890" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+                      <Sequence x:Key="0" sap:VirtualizedContainerService.HintSize="450,848" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Întrebare'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,219" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="1242dc5b-c3bc-4238-bc14-30be0f958f8a" Text="[headers(indexVarianta)]" Version="V3">
+                          <uix:NTypeInto.Target>
+                            <uix:TargetAnchorable BrowserURL="https://docs.google.com/forms/d/1r7bRvrTJlvQWhp0won4XBDmuImqxAHXBz1hFjGV4XSE/edit" DesignTimeRectangle="580, 418, 311, 56" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl aria-label='Întrebare' aria-role='textbox' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-label='Întrebare' aria-role='textbox' tag='DIV' type='' class='T2Ybvb KRoqRc editable' aaname='Întrebare' /&gt;" Guid="1a90cf6c-de84-474b-9267-591decf4634e" ImageBase64="" InformativeScreenshot="2eae9ba615f651572892e69c5652877c.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Formular opționale - Formulare Google' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive" />
+                          </uix:NTypeInto.Target>
+                        </uix:NTypeInto>
+                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Rândul 1'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,219" sap2010:WorkflowViewState.IdRef="NTypeInto_18" ScopeIdentifier="1242dc5b-c3bc-4238-bc14-30be0f958f8a" Text="[DisciplineDict(headers(indexVarianta)).Item(0)]" Version="V3">
+                          <uix:NTypeInto.Target>
+                            <uix:TargetAnchorable BrowserURL="https://docs.google.com/forms/d/1loKwufezg3m3YjJd85ZzIdjNngUckkx65lAGteCNluY/edit" CvTextArea="601, 530, 56, 15" CvTextArgument="Randul 1" CvType="Text" DesignTimeRectangle="602, 528, 278, 21" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl aria-label='valoarea opțiunii' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-label='valoarea opțiunii' tag='INPUT' type='text' class='Hvn9fb zHQkBf' aaname='' /&gt;" Guid="ef7f4a5e-d6d7-4870-84ba-d92f7303e7dd" InformativeScreenshot="328561349f3a4abe394bb99e3915e264.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Formular opționale - Formulare Google' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive" />
+                          </uix:NTypeInto.Target>
+                        </uix:NTypeInto>
+                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Coloana 1'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,219" sap2010:WorkflowViewState.IdRef="NTypeInto_19" ScopeIdentifier="1242dc5b-c3bc-4238-bc14-30be0f958f8a" Text="Prima alegere" Version="V3">
+                          <uix:NTypeInto.Target>
+                            <uix:TargetAnchorable BrowserURL="https://docs.google.com/forms/d/1r7bRvrTJlvQWhp0won4XBDmuImqxAHXBz1hFjGV4XSE/edit" DesignTimeRectangle="982, 528, 270, 21" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl aria-label='valoarea opțiunii' idx='2' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-label='valoarea opțiunii' type='text' tag='INPUT' class='Hvn9fb zHQkBf' aaname='' /&gt;" Guid="190bff91-b162-46b2-9249-29320580d8db" ImageBase64="" InformativeScreenshot="24f3ed0bdffa4d05949c70cd49af5b7d.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Formular opționale - Formulare Google' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V3" Visibility="Interactive" />
+                          </uix:NTypeInto.Target>
+                        </uix:NTypeInto>
+                      </Sequence>
+                      <Sequence x:Key="1" sap:VirtualizedContainerService.HintSize="450,848" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Întrebare'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,219" sap2010:WorkflowViewState.IdRef="NTypeInto_14" ScopeIdentifier="1242dc5b-c3bc-4238-bc14-30be0f958f8a" Text="[headers(indexVarianta)]" Version="V3">
+                          <uix:NTypeInto.Target>
+                            <uix:TargetAnchorable BrowserURL="https://docs.google.com/forms/d/1bAOCdefrOM4NtBpmSGsl2B2zrvPiyUrZ2TLM_YcGBEk/edit" CvTextArea="578, 722, 68, 17" CvTextArgument="Intrebare" CvType="Text" DesignTimeRectangle="580, 721, 712, 24" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;div&amp;gt;div&amp;gt;div' idx='5' parentid='SchemaEditor' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='cnOaDb I9OJHe' parentid='SchemaEditor' tag='DIV' aaname='' check:innerText='Întrebare' /&gt;" Guid="db6be9c5-0525-413d-b94a-71fc0b6e1818" InformativeScreenshot="657bab3c5ac6d02962086868c616d6da.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Formular opționale - Formulare Google' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V3" Visibility="Interactive" />
+                          </uix:NTypeInto.Target>
+                        </uix:NTypeInto>
+                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Rândul 1'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,219" sap2010:WorkflowViewState.IdRef="NTypeInto_20" ScopeIdentifier="1242dc5b-c3bc-4238-bc14-30be0f958f8a" Text="[DisciplineDict(headers(indexVarianta)).Item(0)]" Version="V3">
+                          <uix:NTypeInto.Target>
+                            <uix:TargetAnchorable BrowserURL="https://docs.google.com/forms/d/1pwDwCVwHou7B4VD58uHMrtG6GqAUaX7KO2hYVmyxRcU/edit" CvTextArea="601, 407, 56, 15" CvTextArgument="Randul 1" CvType="Text" DesignTimeRectangle="602, 406, 278, 21" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl aria-label='valoarea opțiunii' idx='7' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-label='valoarea opțiunii' type='text' tag='INPUT' class='Hvn9fb zHQkBf' aaname='' /&gt;" Guid="258886d0-aa23-4eef-9ee2-500adf45774f" ImageBase64="" InformativeScreenshot="a677fff0957b4253ac765f3233f913f9.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Formular opționale - Formulare Google' /&gt;" SearchSteps="Selector, CV" Version="V3" Visibility="Interactive" />
+                          </uix:NTypeInto.Target>
+                        </uix:NTypeInto>
+                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Coloana 1'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,219" sap2010:WorkflowViewState.IdRef="NTypeInto_21" ScopeIdentifier="1242dc5b-c3bc-4238-bc14-30be0f958f8a" Text="Prima alegere" Version="V3">
+                          <uix:NTypeInto.Target>
+                            <uix:TargetAnchorable BrowserURL="https://docs.google.com/forms/d/1MDCR_JSu_x2wo3CM0GXhgQb1Bhr3RMyKOjX_b7-B7ck/edit" CvTextArea="980, 872, 66, 15" CvTextArgument="Coloana 1" CvType="Text" DesignTimeRectangle="982, 831, 270, 21" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl aria-label='valoarea opțiunii' idx='8' tag='INPUT' /&gt;" FuzzyMatches="10000" FuzzySelectorArgument="&lt;webctrl aria-label='valoarea opțiunii' type='text' tag='INPUT' class='Hvn9fb zHQkBf' aaname='' /&gt;" Guid="e3291bc5-ca40-4a96-9be8-c480b77b6f12" InformativeScreenshot="29072d961a9934f54f47fa87f601c071.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Formular opționale - Formulare Google' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V3" Visibility="Interactive" />
+                          </uix:NTypeInto.Target>
+                        </uix:NTypeInto>
+                      </Sequence>
+                      <Sequence x:Key="2" sap:VirtualizedContainerService.HintSize="450,848" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Întrebare'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,219" sap2010:WorkflowViewState.IdRef="NTypeInto_15" ScopeIdentifier="1242dc5b-c3bc-4238-bc14-30be0f958f8a" Text="[headers(indexVarianta)]" Version="V3">
+                          <uix:NTypeInto.Target>
+                            <uix:TargetAnchorable BrowserURL="https://docs.google.com/forms/d/1hgbBuIZCX5DQVZK1PSMkFbzIr6lkZT39eyQ385mUyPM/edit" CvTextArea="578, 712, 69, 17" CvTextArgument="Intrebare" CvType="Text" DesignTimeRectangle="580, 711, 712, 24" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;div&amp;gt;div&amp;gt;div' idx='9' parentid='SchemaEditor' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='cnOaDb I9OJHe' parentid='SchemaEditor' tag='DIV' aaname='' check:innerText='Întrebare' /&gt;" Guid="a6b0b9ad-8f4c-4a95-8ce6-f81a8a282756" InformativeScreenshot="b33e4f87c4e3d8a2dda047097da23ee6.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Formular opționale - Formulare Google' /&gt;" SearchSteps="Selector, CV" Version="V3" Visibility="Interactive" />
+                          </uix:NTypeInto.Target>
+                        </uix:NTypeInto>
+                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Rândul 1'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,219" sap2010:WorkflowViewState.IdRef="NTypeInto_22" ScopeIdentifier="1242dc5b-c3bc-4238-bc14-30be0f958f8a" Text="[DisciplineDict(headers(indexVarianta)).Item(0)]" Version="V3">
+                          <uix:NTypeInto.Target>
+                            <uix:TargetAnchorable BrowserURL="https://docs.google.com/forms/d/1HgGceDH5zsbNZwZvO2iwPlcYmhbR271RlQ9T2r1-2Wo/edit" CvTextArea="601, 753, 56, 15" CvTextArgument="Randul 1" CvType="Text" DesignTimeRectangle="602, 711, 278, 22" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl aria-label='valoarea opțiunii' idx='11' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-label='valoarea opțiunii' type='text' tag='INPUT' class='Hvn9fb zHQkBf' aaname='' /&gt;" Guid="dab934cf-d7f8-442b-b2fd-4b399c4fbad3" InformativeScreenshot="23a7f7d683fcdaffad456f3721939347.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Formular opționale - Formulare Google' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive" />
+                          </uix:NTypeInto.Target>
+                        </uix:NTypeInto>
+                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Coloana 1'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,219" sap2010:WorkflowViewState.IdRef="NTypeInto_23" ScopeIdentifier="1242dc5b-c3bc-4238-bc14-30be0f958f8a" Text="Prima alegere" Version="V3">
+                          <uix:NTypeInto.Target>
+                            <uix:TargetAnchorable BrowserURL="https://docs.google.com/forms/d/1HgGceDH5zsbNZwZvO2iwPlcYmhbR271RlQ9T2r1-2Wo/edit" CvTextArea="980, 753, 66, 15" CvTextArgument="Coloana 1" CvType="Text" DesignTimeRectangle="982, 711, 270, 22" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl aria-label='valoarea opțiunii' idx='12' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-label='valoarea opțiunii' type='text' tag='INPUT' class='Hvn9fb zHQkBf' aaname='' /&gt;" Guid="dd28e220-6b70-4dad-83e2-c0f54ca7cf76" InformativeScreenshot="159140c9c15ced7fd6a5741facf0e9df.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Formular opționale - Formulare Google' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive" />
+                          </uix:NTypeInto.Target>
+                        </uix:NTypeInto>
+                      </Sequence>
+                      <Sequence x:Key="3" sap:VirtualizedContainerService.HintSize="450,848" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Întrebare'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,219" sap2010:WorkflowViewState.IdRef="NTypeInto_16" ScopeIdentifier="1242dc5b-c3bc-4238-bc14-30be0f958f8a" Text="[headers(indexVarianta)]" Version="V3">
+                          <uix:NTypeInto.Target>
+                            <uix:TargetAnchorable BrowserURL="https://docs.google.com/forms/d/1JzDulHaxCsAv2FeLDs3glZGsCDriBps3gBbQVcP-stw/edit" CvTextArea="578, 856, 68, 17" CvTextArgument="Intrebare" CvType="Text" DesignTimeRectangle="580, 855, 712, 24" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;div&amp;gt;div&amp;gt;div' idx='13' parentid='SchemaEditor' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='cnOaDb I9OJHe' parentid='SchemaEditor' tag='DIV' aaname='' check:innerText='Întrebare' /&gt;" Guid="6c855232-397e-4328-b38e-b4fc63a021b4" InformativeScreenshot="dec20b79ee441d8fb8716e4335d4dbfb.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Formular opționale - Formulare Google' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive" />
+                          </uix:NTypeInto.Target>
+                        </uix:NTypeInto>
+                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Rândul 1'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,219" sap2010:WorkflowViewState.IdRef="NTypeInto_24" ScopeIdentifier="1242dc5b-c3bc-4238-bc14-30be0f958f8a" Text="[DisciplineDict(headers(indexVarianta)).Item(0)]" Version="V3">
+                          <uix:NTypeInto.Target>
+                            <uix:TargetAnchorable BrowserURL="https://docs.google.com/forms/d/1EC0YPJDumzy4eOc93w2g5mjUXw4O6HucqrgLKB-Jg70/edit" CvTextArea="601, 845, 56, 15" CvTextArgument="Randul 1" CvType="Text" DesignTimeRectangle="602, 803, 278, 22" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl aria-label='valoarea opțiunii' idx='21' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-label='valoarea opțiunii' type='text' tag='INPUT' class='Hvn9fb zHQkBf' aaname='' /&gt;" Guid="efc7e28b-d08b-4c39-8fcb-9372307eba96" InformativeScreenshot="a372db49b4ed46a34f4d88bf26db76a1.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Formular opționale - Formulare Google' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive" />
+                          </uix:NTypeInto.Target>
+                        </uix:NTypeInto>
+                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Coloana 1'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,219" sap2010:WorkflowViewState.IdRef="NTypeInto_25" ScopeIdentifier="1242dc5b-c3bc-4238-bc14-30be0f958f8a" Text="Prima alegere" Version="V3">
+                          <uix:NTypeInto.Target>
+                            <uix:TargetAnchorable BrowserURL="https://docs.google.com/forms/d/14Y-UBJaVvmAZ8EK_M8rhjvvdFin2qvmBgxWjq_yIsbI/edit" DesignTimeRectangle="982, 496, 270, 21" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl aria-label='valoarea opțiunii' idx='22' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-label='valoarea opțiunii' type='text' tag='INPUT' class='Hvn9fb zHQkBf' aaname='' /&gt;" Guid="25408c4c-4577-48a1-90ce-af9a3fc24ff6" ImageBase64="" InformativeScreenshot="1fd57e7c8fa2c40a09a69460ad0566cc.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Formular opționale - Formulare Google' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive" />
+                          </uix:NTypeInto.Target>
+                        </uix:NTypeInto>
+                      </Sequence>
+                    </Switch>
+                    <ui:ForEach x:TypeArguments="x:Int32" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="497,1090" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[Enumerable.Range(0, DisciplineDict(headers(indexVarianta)).Count - 1)]">
+                      <ui:ForEach.Body>
+                        <ActivityAction x:TypeArguments="x:Int32">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="x:Int32" Name="index" />
+                          </ActivityAction.Argument>
+                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="452,902" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <If Condition="[DisciplineDict(headers(indexVarianta)).Item(index + 1).Equals(&quot;&quot;)]" sap:VirtualizedContainerService.HintSize="410,296" sap2010:WorkflowViewState.IdRef="If_2">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <If.Then>
+                                <Sequence sap:VirtualizedContainerService.HintSize="376,113" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <ui:Break sap:VirtualizedContainerService.HintSize="334,25" sap2010:WorkflowViewState.IdRef="Break_1" />
+                                </Sequence>
+                              </If.Then>
+                              <If.Else>
+                                <Sequence sap2010:WorkflowViewState.IdRef="Sequence_11" />
+                              </If.Else>
+                            </If>
+                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="410,219" sap2010:WorkflowViewState.IdRef="NTypeInto_7" ScopeIdentifier="1242dc5b-c3bc-4238-bc14-30be0f958f8a" Text="[DisciplineDict(headers(indexVarianta)).Item(index + 1)]" Version="V3">
+                              <uix:NTypeInto.Target>
+                                <uix:TargetAnchorable BrowserURL="https://docs.google.com/forms/d/1r7bRvrTJlvQWhp0won4XBDmuImqxAHXBz1hFjGV4XSE/edit" CvTextArea="600, 577, 103, 17" CvTextArgument="Adauga un rand" CvType="Text" DesignTimeRectangle="88, 99, 162, 29" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl aria-label='Adaugă un rând' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-label='Adaugă un rând' tag='INPUT' type='text' class='Hvn9fb zHQkBf' aaname='' /&gt;" Guid="59f5d8b7-a55e-48bc-9ff3-bc056a3934c4" ImageBase64="" InformativeScreenshot="2540c1da8822c5f68f2bf1434b285e99.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Formular opționale - Formulare Google' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive" />
+                              </uix:NTypeInto.Target>
+                            </uix:NTypeInto>
+                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="410,219" sap2010:WorkflowViewState.IdRef="NTypeInto_8" ScopeIdentifier="1242dc5b-c3bc-4238-bc14-30be0f958f8a" Text="[string.Format(&quot;a {0}-a alegere&quot;, index + 2)]" Version="V3">
+                              <uix:NTypeInto.Target>
+                                <uix:TargetAnchorable BrowserURL="https://docs.google.com/forms/d/1r7bRvrTJlvQWhp0won4XBDmuImqxAHXBz1hFjGV4XSE/edit" CvTextArea="980, 577, 118, 17" CvTextArgument="Adauga O coloana" CvType="Text" DesignTimeRectangle="982, 576, 116, 24" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl aria-label='Adaugă o coloană' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-label='Adaugă o coloană' tag='INPUT' type='text' class='Hvn9fb zHQkBf' aaname='' /&gt;" Guid="c73a85ea-afa7-4d0e-8811-c1a7aae88be8" InformativeScreenshot="7352c99c82971e3b479d6cd46bdb20b2.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Formular opționale - Formulare Google' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive" />
+                              </uix:NTypeInto.Target>
+                            </uix:NTypeInto>
+                          </Sequence>
+                        </ActivityAction>
+                      </ui:ForEach.Body>
+                    </ui:ForEach>
+                    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="497,91" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[String.Format(&quot;Done step {0}&quot;,indexVarianta)]" />
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEach.Body>
+            </ui:ForEach>
+            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="573,91" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="Done creare formular" />
+            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="573,91" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="Begin copiere url" />
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Trimite'" sap:VirtualizedContainerService.HintSize="573,158" sap2010:WorkflowViewState.IdRef="NClick_9" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="1242dc5b-c3bc-4238-bc14-30be0f958f8a" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://docs.google.com/forms/d/1mK9zFOJM4n7dqDUmrGKHmSGOI2rAtWCA96GY-XYQku8/edit" CvElementArea="1671, 141, 98, 39" CvTextArea="1695, 154, 50, 13" CvTextArgument="Trimite" CvType="Button" DesignTimeRectangle="1673, 143, 95, 36" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span' idx='6' parentid='tJHJj' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='l4V7wb Fxmcue' parentid='tJHJj' tag='SPAN' aaname='' check:innerText='Trimite' /&gt;" Guid="1e72b26f-e93b-4fd8-88fd-ca5a3e31b62b" InformativeScreenshot="788541025814451762c6b21504b1bfbb.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Formular opționale - Formulare Google' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Nu colecta'" sap:VirtualizedContainerService.HintSize="573,158" sap2010:WorkflowViewState.IdRef="NClick_10" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="1242dc5b-c3bc-4238-bc14-30be0f958f8a" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://docs.google.com/forms/d/1mK9zFOJM4n7dqDUmrGKHmSGOI2rAtWCA96GY-XYQku8/edit" CvElementArea="1040, 251, 181, 45" CvType="InputBox" DesignTimeRectangle="1042, 254, 176, 40" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl aria-role='option' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' tabindex='0' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='option' type='' tabindex='0' tag='DIV' class='MocG8c HZ3kWc  LMgvRb KKjvXb' aaname='' check:innerText='Nu colecta' /&gt;" Guid="c2987bbd-0b36-48e2-9dc1-e44a4b0638bd" InformativeScreenshot="882177761752065f791bfb30bdaa61fd.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Formular opționale - Formulare Google' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Confirmate'" sap:VirtualizedContainerService.HintSize="573,158" sap2010:WorkflowViewState.IdRef="NClick_11" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="1242dc5b-c3bc-4238-bc14-30be0f958f8a" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://docs.google.com/forms/d/1mK9zFOJM4n7dqDUmrGKHmSGOI2rAtWCA96GY-XYQku8/edit" CvTextArea="1057, 310, 74, 14" CvTextArgument="Confirmate" CvType="Text" DesignTimeRectangle="1058, 309, 163, 32" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Confirmate' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Confirmate' type='' tag='SPAN' class='vRMGwf oJeWuf' check:innerText='Confirmate' /&gt;" Guid="ffde8657-4b45-4966-91e6-7bb9dbe76e0a" InformativeScreenshot="5b55d8c87f94a930c68bd960ba1e5bb6.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Formular opționale - Formulare Google' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V3" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Trimite prin'" sap:VirtualizedContainerService.HintSize="573,158" sap2010:WorkflowViewState.IdRef="NClick_12" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="1242dc5b-c3bc-4238-bc14-30be0f958f8a" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://docs.google.com/forms/d/1mK9zFOJM4n7dqDUmrGKHmSGOI2rAtWCA96GY-XYQku8/edit" DesignTimeRectangle="873, 338, 24, 24" DesignTimeScaleFactor="1" ElementType="Icon" FullSelectorArgument="&lt;webctrl idx='2' parentid='VVcGtd' tag='svg' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' parentid='VVcGtd' tag='svg' class='' aaname='' /&gt;" Guid="6f9b875f-30ab-446f-b002-c97c3891b292" InformativeScreenshot="fc7e1d719d0c217bc617994e0b981948.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Formular opționale - Formulare Google' /&gt;" SearchSteps="FuzzySelector" Version="V3" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target CvTextArea="675, 344, 80, 16" CvTextArgument="Trimite prin" CvType="Text" DesignTimeRectangle="653, 341, 113, 20" ElementType="Text" FullSelectorArgument="&lt;webctrl class='KUXtM' parentid='VVcGtd' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl class='KUXtM' parentid='VVcGtd' tag='DIV' type='' aaname='Trimite prin' check:innerText='Trimite prin' /&gt;" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Scurtează adresa URL'" sap:VirtualizedContainerService.HintSize="573,158" sap2010:WorkflowViewState.IdRef="NClick_13" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="1242dc5b-c3bc-4238-bc14-30be0f958f8a" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://docs.google.com/forms/d/1mK9zFOJM4n7dqDUmrGKHmSGOI2rAtWCA96GY-XYQku8/edit" CvElementArea="676, 467, 21, 22" CvType="CheckBox" DesignTimeRectangle="679, 470, 16, 16" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl idx='2' parentid='c65' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' parentid='c65' tag='DIV' class='uHMk6b fsHoPb' aaname='' /&gt;" Guid="5ddd0f54-9abb-4313-8d6b-ea66f1a44e6c" InformativeScreenshot="7461141e36b2b8f6c03fc62c2cb33b70.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Formular opționale - Formulare Google' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target CvTextArea="706, 469, 143, 14" CvTextArgument="Scurteaza adresa URL" CvType="Text" DesignTimeRectangle="708, 468, 141, 20" ElementType="Text" FullSelectorArgument="&lt;webctrl parentid='link' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='link' tag='SPAN' type='' class='aDTYNe snByac' aaname='Scurtează adresa URL' check:innerText='Scurtează adresa URL' /&gt;" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NGetText DisplayName="Get Text 'Link'" sap:VirtualizedContainerService.HintSize="573,158" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="1242dc5b-c3bc-4238-bc14-30be0f958f8a" TextString="[UrlCreatedForm]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://docs.google.com/forms/d/1mK9zFOJM4n7dqDUmrGKHmSGOI2rAtWCA96GY-XYQku8/edit" CvElementArea="670, 431, 553, 28" CvType="InputBox" DesignTimeRectangle="677, 434, 542, 24" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl aria-label='Link pentru trimitere. Apasă Ctrl+C pentru a copia' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-label='Link pentru trimitere. Apasă Ctrl+C pentru a copia' tag='INPUT' type='text' class='whsOnd zHQkBf' aaname='' /&gt;" Guid="d4240da0-d762-49cc-834a-16e7dadf5f8e" InformativeScreenshot="946b32b14fa8caad6d62ca99212bc120.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Formular opționale - Formulare Google' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target CvTextArea="676, 399, 33, 15" CvTextArgument="Link" CvType="Text" DesignTimeRectangle="653, 396, 590, 24" ElementType="Text" FullSelectorArgument="&lt;webctrl class='haTU0' parentid='link' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl class='haTU0' parentid='link' tag='DIV' type='' aaname='Link' check:innerText='Link' /&gt;" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="573,91" sap2010:WorkflowViewState.IdRef="WriteLine_4" Text="[&quot;found url: &quot; + UrlCreatedForm]" />
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Trimite formularul'" sap:VirtualizedContainerService.HintSize="573,158" sap2010:WorkflowViewState.IdRef="NClick_14" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="1242dc5b-c3bc-4238-bc14-30be0f958f8a" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://docs.google.com/forms/d/1xhQMOch1tY3DFYkD0xoPk2mPhanN13hKpjMopfe076c/edit" CvElementArea="1203, 188, 23, 24" CvType="CloseButton" DesignTimeRectangle="1208, 194, 14, 14" DesignTimeScaleFactor="1" ElementType="Icon" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;span&amp;gt;svg&amp;gt;path' idx='2' tag='path' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='' tag='path' aaname='' /&gt;" Guid="408e5d19-f11d-4c26-b03e-c545ff2bbe11" InformativeScreenshot="9d98d0eafe7460d7d1a60eef4481a612.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Formular opționale - Formulare Google' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target CvTextArea="675, 193, 179, 21" CvTextArgument="Trimite formularul" CvType="Text" DesignTimeRectangle="677, 191, 490, 28" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Trimite formularul' aria-role='heading' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Trimite formularul' aria-role='heading' tag='DIV' type='' class='Shk6y bEd2J irNx2b' check:innerText='Trimite formularul' /&gt;" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Setări'" sap:VirtualizedContainerService.HintSize="573,158" sap2010:WorkflowViewState.IdRef="NClick_15" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="1242dc5b-c3bc-4238-bc14-30be0f958f8a" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://docs.google.com/forms/d/1xhQMOch1tY3DFYkD0xoPk2mPhanN13hKpjMopfe076c/edit" CvTextArea="1015, 212, 40, 13" CvTextArgument="Setari" CvType="Text" DesignTimeRectangle="1005, 201, 62, 36" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Setări' parentid='tJHJj' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Setări' parentid='tJHJj' tag='SPAN' type='' class='kx3Hed VZhFab' check:innerText='Setări' /&gt;" Guid="43a22a8d-c838-418d-af4e-16c7a11b30b2" InformativeScreenshot="d14d53b408710e6fdd00fb81f0f7e575.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Formular opționale - Formulare Google' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'PrezentareGestionează m…'" sap:VirtualizedContainerService.HintSize="573,158" sap2010:WorkflowViewState.IdRef="NClick_16" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="1242dc5b-c3bc-4238-bc14-30be0f958f8a" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://docs.google.com/forms/d/1xhQMOch1tY3DFYkD0xoPk2mPhanN13hKpjMopfe076c/edit#settings" CvElementArea="1247, 574, 27, 26" CvType="ArrowButton" DesignTimeRectangle="1248, 574, 26, 26" DesignTimeScaleFactor="1" ElementType="ArrowButton" Guid="213fb8a4-1f61-4cc5-b8d8-0df9593c3313" InformativeScreenshot="b7b4ac06c33978b4bdb98397338f42fb.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Formular opționale - Formulare Google' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V3" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="610, 565, 441, 46" FullSelectorArgument="&lt;webctrl class='qjigG' idx='2' parentid='SettingsView' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl class='qjigG' type='' parentid='SettingsView' tag='DIV' aaname='Prezentare' check:innerText='Prezentare&amp;#xD;&amp;#xA;Gestionează modul în care sunt prezentate formularul și răspunsurile' /&gt;" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Dezactivează salvarea'" sap:VirtualizedContainerService.HintSize="573,158" sap2010:WorkflowViewState.IdRef="NClick_17" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="1242dc5b-c3bc-4238-bc14-30be0f958f8a" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://docs.google.com/forms/d/1xhQMOch1tY3DFYkD0xoPk2mPhanN13hKpjMopfe076c/edit#settings" CvTextArea="1213, 697, 50, 13" CvTextArgument="Editare" CvType="Text" DesignTimeRectangle="1233, 701, 37, 14" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl parentid='i40' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='i40' tag='DIV' type='' class='hh4xKf MLPG7' aaname='' /&gt;" Guid="2ce08c1b-2d96-40a9-b986-6ec324a9a3ea" InformativeScreenshot="dce58c2b2f791a92da264eff9ed6570c.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Formular opționale - Formulare Google' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="640, 696, 405, 24" FullSelectorArgument="&lt;webctrl aaname='Dezactivează salvarea automată pentru toți respondenții' parentid='SettingsView' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Dezactivează salvarea automată pentru toți respondenții' parentid='SettingsView' tag='DIV' type='' class='NwkH8b ' check:innerText='Dezactivează salvarea automată pentru toți respondenții' /&gt;" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAYAAABccqhmAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAArZSURBVHhe7d3BbhNpFsXxPAKP0I/C0t7lDdKPEGKEZkcQLEE9G7ZkVmQ3mdWEOCOhsGQWUZQlicxIiTSbCIFGvelFpq6pEu7kGqrsr8zNPf8j/STUcarcuvqOq1wVe610ttf37j0cHN7fGh5ubg3GO6PhwfHW4GBSuQbQ2mQ0GL+t1s+erSVbU/USixdb9NUTXbcnvDUcf3L+ZwAsq1pb00IYjH+tl97PjS38rcHhYxY9sHJ2hLDzl8H+L/VyXF1Y+EAkh49XVgR2qF/tlHN6IJZqTfZ4ajB91R8e/ObsGEAQD4eHv9larZdtmdjhRf1uvrtTAKFMip0S2IZsgzd2ACC25UuAxQ/caYuXAIsfSKF7CXy9zMfiBzKw9+86vTHIu/1ALnZ1oF7e349dS/Q2AOBus3t46mXuh/N+ILHhwafvngpUD3p865cAZLJdL/c/p371934BQBbzjgLsL4vcXwCQze2jgOo/cu4PKLh5FMA7/4CW0fBf364IfP2UEf+BAPKxT++ql7/d+MMHewBSmtOAh4P9++4DAKQ2/aDRreGbTe+HAJKr1j7n/4Cs8Y5d/3/r/xBAZqPh+Jjr/4CuiRWA9wMAAigAQBgFAAijAABhFAAgjAIAhFEAgDAKABBGAQDCKABAGAUACKMAAGEUACCMAgCEUQCAMAoAEEYBAMIoAEAYBQAIowAAYRQAIIwCAIRRAIAwCgAQRgEAwigAQBgFAAijAABhFAAgjAIAhFEAgDAKoPby0b+vj/7+n+vLsy/Xv//vj+sm9u+zk6vpz+wx3u+WROLEm0828gWw++L0+uq/v9cj/3HssbvPT91tlUDixJtPNrIF8HTj6PqierVfNFYEtg1v28sgceLNJxvJArBX8NnD/EVj23j15Njdx6JInHjzyUauAGzBlk7JUwISJ958spEqADtkL/HKfzO2zVKnAyROvPlkI1UAXd7s6xq7euDtsysSJ958spEpAHu3v++UOBUgceLNJxuZAujz1b+J7cPbdxckTrz5ZCNRAHYDz6ry8tF79zm0ReLEm082EgVwtPexHmn/sTsGvefQFokTbz7ZSBSA3cq7qlycL/dmIIkTbz7ZSBRAH5f+5sX25T2HtkicePPJRqIAVh3vObRF4sSbTzYUQA/xnkNbJE68+WTDKUDhcAqQJ958spEogIvzz/VI+8+Hkyv3ObRF4sSbTzYSBcBlQLJIvPlkI1EAdnPOqrLspwaROPHmk41EARhuBSZd480nG5kC4I+BSNd488lGpgDMZY9vBpZ49TckTrz5ZCNVAM823vVySdC2adv29tkViRNvPtlIFYDp41Sg5OcCkjjx5pONXAEYW7AljgRsG6+rQvH2sSgSJ958spEsAGOH7MtcGbCPFC912D+LxIk3n2xkC6DBF4OQefHmk418ATSarwazW3lnTw/s33YrMV8NphdvPtlQAIAwCgAQRgEAwigAQBgFAAijAABhFAAgjAIAhFEAgDAKABBGAQDCKABAGAUACKMAAGEUACCMAgCEUQCAMAoAEEYBAMIoAEAYBQAIowAAYRQAIIwCAIRRAIAwCgAQRgEAwigAQBgFAAijAGrNtwNfnn259e3AZydXfDuwYLz5ZCNfALsvTqff+d829tjd56futkogceLNJxvZAni6cXR9Ub3aLxorAtuGt+1lkDjx5pONZAHYK/jsYf6isW28enLs7mNRJE68+WQjVwC2YEun5CkBiRNvPtlIFYAdspd45b8Z22ap0wESJ958spEqgC5v9nWNXT3w9tkViRNvPtnIFIC92993SpwKkDjx5pONTAH0+erfxPbh7bsLEifefLKRKAC7gWdVefnovfsc2iJx4s0nG4kCONr7WI+0/9gdg95zaIvEiTefbCQKwG7lXVUuzpd7M5DEiTefbCQKoI9Lf/Ni+/KeQ1skTrz5ZCNRAKuO9xzaInHizScbCqCHeM+hLRIn3nyy4RSgcDgFyBNvPtlIFMDF+ed6pP3nw8mV+xzaInHizScbiQLgMiBZJN58spEoALs5Z1VZ9lODSJx488lGogAMtwKTrvHmk41MAfDHQKRrvPlkI1MA5rLHNwNLvPobEifefLKRKoBnG+96uSRo27Rte/vsisSJN59spArA9HEqUPJzAUmcePPJRq4AjC3YEkcCto3XVaF4+1gUiRNvPtlIFoCxQ/ZlrgzYR4qXOuyfReLEm082sgXQ4ItByLx488lGvgAazVeD2a28s6cH9m+7lZivBtOLN59sKABAGAUACKMAAGEUACCMAgCEUQCAMAoAEEYBAMIoAEAYBQAIowAAYRQAIIwCAIRRAIAwCgAQRgEAwigAQBgFAAijAABhFAAgjAIAhFEAgDAKABBGAQDCKABAGAUACKMAAGEUACCMAgCEUQC15tuBL8++3Pp24LOTK74dWDDefLKRL4DdF6fT7/xvG3vs7vNTd1slkDjx5pONbAE83Ti6vqhe7ReNFYFtw9v2MkicePPJRrIA7BV89jB/0dg2Xj05dvexKBIn3nyykSsAW7ClU/KUgMSJN59spArADtlLvPLfjG2z1OkAiRNvPtlIFUCXN/u6xq4eePvsisSJN59sZArA3u3vOyVOBUicePPJRqYA+nz1b2L78PbdBYkTbz7ZSBSA3cCzqrx89N59Dm2ROPHmk41EARztfaxH2n/sjkHvObRF4sSbTzYSBWC38q4qF+fLvRlI4sSbTzYSBdDHpb95sX15z6EtEifefLKRKIBVx3sObZE48eaTDQXQQ7zn0BaJE28+2XAKUDicAuSJN59sJArg4vxzPdL+8+Hkyn0ObZE48eaTjUQBcBmQLBJvPtlIFIDdnLOqLPupQSROvPlkI1EAhluBSdd488lGpgD4YyDSNd58spEpAHPZ45uBJV79DYkTbz7ZSBXAs413vVwStG3atr19dkXixJtPNlIFYPo4FSj5uYAkTrz5ZCNXAMYWbIkjAdvG66pQvH0sisSJN59sJAvA2CH7MlcG7CPFSx32zyJx4s0nG9kCaPDFIGRevPlkI18AjearwexW3tnTA/u33UrMV4PpxZtPNhQAIIwCAIRRAIAwCgAQRgEAwigAQBgFAAijAABhFAAgjAIAhFEAgDAKABBGAQDCKABAGAUACKMAAGEUACCMAgCEUQCAMAoAEEYBAMIoAEAYBQAIowAAYRQAIIwCAIRRAIAwCgAQRgEAwigAQBgFAAizApjc/I8AJEzWRsPxsfMDAMmNBuO3aw8GB3/zfgggtweDN/9Y2xq+2fR+CCC5au2vPRzs33d/CCC1h4PD+2ub62/vbQ3Hn7wHAEhqePBprYm9GeA+CEBK0/P/JqPhwbr3IABZ7f9aL/81TgMALZN66X9L1QjbzgMBpDPeqZf9t3AUAGjYHOz/Ui/7P4ejACC97Xq53w5HAUBqk7mv/k24IgBkNfPO//fyYPjmr/4GANxFo2pN18v7x7FTAf5KEEhjsrm+d69e3u1i5wr2izc2BOBu+fF5/7xQAsCdtvjib0IJAHfS8ou/CSUA3B2j4cFxscXfxN4Y5OoAEJu929/5Db8usWuJ1Y44GgBimYyG/1yvl2m/+XpKwG3DwE83vXN3f7vXV/15sSKoP1SUIwJglX7mwvcyPTUYHu7xtwRAT6q1ZZ/eZbfrh1n4XqYfNGqfNlwVQv1xYxwhAN1U5/R2N+54x9aSranyi35t7f98FFkQvSEvMQAAAABJRU5ErkJggg==" InformativeScreenshot="cd7b6b55df9be14d4fe62bc116cd599c.jpg" Selector="&lt;html app='msedge.exe' title='Formulare Google' /&gt;" Title="Formulare Google" Url="https://docs.google.com/forms/u/0/?tgif=d&amp;ec=asw-forms-hero-goto" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

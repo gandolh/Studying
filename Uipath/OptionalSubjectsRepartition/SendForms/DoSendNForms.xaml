@@ -1,0 +1,292 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="DoSendNForms" this:DoSendNForms.sendingFormsCount="5" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="sendingFormsCount" Type="InArgument(x:Int32)" />
+    <x:Property Name="formsUrl" Type="InArgument(x:String)" />
+  </x:Members>
+  <sap:VirtualizedContainerService.HintSize>1206,5973</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="684,5908" sap2010:WorkflowViewState.IdRef="Sequence_4">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: New tab" sap:VirtualizedContainerService.HintSize="622,5797" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" ScopeGuid="ca0d3e73-3c03-4996-afff-d26c2b789c0d" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="588,5580" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'editable text'" EmptyFieldMode="None" sap:VirtualizedContainerService.HintSize="526,218" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="HardwareEvents" ScopeIdentifier="ca0d3e73-3c03-4996-afff-d26c2b789c0d" Text="[formsUrl + &quot;[k(enter)]&quot;]" Timeout="10" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable CvElementArea="102, 42, 1464, 32" CvType="InputBox" DesignTimeRectangle="190, 56, 1233, 33" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;ctrl name='New tab - Microsoft Edge' role='pane' /&gt;&lt;ctrl name='App bar' role='tool bar' /&gt;&lt;ctrl name='Address and search bar' role='editable text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='New tab - Microsoft Edge' role='pane' /&gt;&lt;ctrl name='App bar' role='tool bar' /&gt;&lt;ctrl name='Address and search bar' role='editable text' automationid='' /&gt;" Guid="51731f04-a13a-49b5-a783-0f369ac273ec" ImageBase64="" InformativeScreenshot="3a4e2103a6e8c4117755db7f760fea75.png" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' title='New tab - Personal - Microsoft​ Edge' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="141, 56, 50, 33" ElementType="Icon" FullSelectorArgument="&lt;ctrl name='New tab - Microsoft Edge' role='pane' /&gt;&lt;ctrl name='App bar' role='tool bar' /&gt;&lt;ctrl name='Search icon' role='graphic' /&gt;" FuzzySelectorArgument="&lt;ctrl name='New tab - Microsoft Edge' role='pane' /&gt;&lt;ctrl name='App bar' role='tool bar' /&gt;&lt;ctrl name='Search icon' role='graphic' automationid='' /&gt;" SearchSteps="Selector, FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <ui:ForEach x:TypeArguments="x:Int32" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="526,5207" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[Enumerable.Range(0, sendingFormsCount)]">
+              <ui:ForEach.Body>
+                <ActivityAction x:TypeArguments="x:Int32">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:Int32" Name="index" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="492,5021" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Sequence DisplayName="Complete and send" sap:VirtualizedContainerService.HintSize="450,4736" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                      <Sequence.Variables>
+                        <Variable x:TypeArguments="scg:List(x:Int32)" Default="[New List(Of Int32) From {1,3}]" Name="list22" />
+                        <Variable x:TypeArguments="s:String[]" Default="[{&quot;&quot;,&quot;&quot;,&quot;&quot;}]" Name="ToBeClickedSelectors11" />
+                        <Variable x:TypeArguments="s:String[]" Default="[{&quot;&quot;,&quot;&quot;}]" Name="ToBeClickedSelectors12" />
+                        <Variable x:TypeArguments="s:String[]" Default="[{&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;}]" Name="ToBeClickedSelectors21" />
+                        <Variable x:TypeArguments="s:String[]" Default="[{&quot;&quot;,&quot;&quot;,&quot;&quot;}]" Name="ToBeClickedSelectors22" />
+                      </Sequence.Variables>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,143" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Aprove using my email&quot;]" />
+                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'DIV'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="ca0d3e73-3c03-4996-afff-d26c2b789c0d" Version="V3">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable BrowserURL="https://docs.google.com/forms/d/e/1FAIpQLSeZA4DZZcFiyBGNqlEyNhFTJQMxzX4ZmB5OuQiD1k_sW58BIw/viewform" CvElementArea="644, 442, 22, 22" CvType="CheckBox" DesignTimeRectangle="648, 445, 16, 16" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl idx='2' parentid='i5' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' parentid='i5' tag='DIV' class='uHMk6b fsHoPb' aaname='' /&gt;" Guid="a6e152ba-df94-4f15-8b75-7f93bfc45ddc" InformativeScreenshot="fe16b62dcb465020d1fbe0dee8010b06.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Formular opționale' /&gt;" SearchSteps="Selector, CV" Version="V2" Visibility="Interactive" />
+                        </uix:NClick.Target>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </uix:NClick>
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,143" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Alegere sem 1, prima optionala&quot;]" />
+                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="PickOptionale11.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="SendForms\PickOptionale11.xaml">
+                        <ui:InvokeWorkflowFile.Arguments>
+                          <OutArgument x:TypeArguments="s:String[]" x:Key="ToBeClickedSelectors11">[ToBeClickedSelectors11]</OutArgument>
+                        </ui:InvokeWorkflowFile.Arguments>
+                      </ui:InvokeWorkflowFile>
+                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'DIV'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="ca0d3e73-3c03-4996-afff-d26c2b789c0d" Version="V3">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable BrowserURL="https://docs.google.com/forms/d/e/1FAIpQLSeZA4DZZcFiyBGNqlEyNhFTJQMxzX4ZmB5OuQiD1k_sW58BIw/viewform" CvElementArea="1004, 708, 28, 26" CvType="RadioButton" DesignTimeRectangle="1008, 711, 20, 20" DesignTimeScaleFactor="1" FullSelectorArgument="[ToBeClickedSelectors11(0)]" Guid="df34cb12-30b3-432f-96e1-90ebc216df48" ImageBase64="" InformativeScreenshot="7af8cf383d445196da89f21ff101488d.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Formular opționale' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                        </uix:NClick.Target>
+                      </uix:NClick>
+                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'DIV'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="ca0d3e73-3c03-4996-afff-d26c2b789c0d" Version="V3">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable BrowserURL="https://docs.google.com/forms/d/e/1FAIpQLSeZA4DZZcFiyBGNqlEyNhFTJQMxzX4ZmB5OuQiD1k_sW58BIw/viewform" CvElementArea="1004, 708, 28, 26" CvType="RadioButton" DesignTimeRectangle="1008, 711, 20, 20" DesignTimeScaleFactor="1" FullSelectorArgument="[ToBeClickedSelectors11(1)]" FuzzySelectorArgument="&lt;webctrl type='' class='AB7Lab Id5V1' tag='DIV' aaname='' /&gt;" Guid="df34cb12-30b3-432f-96e1-90ebc216df48" ImageBase64="" InformativeScreenshot="7af8cf383d445196da89f21ff101488d.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Formular opționale' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                        </uix:NClick.Target>
+                      </uix:NClick>
+                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'DIV'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="ca0d3e73-3c03-4996-afff-d26c2b789c0d" Version="V3">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable BrowserURL="https://docs.google.com/forms/d/e/1FAIpQLSeZA4DZZcFiyBGNqlEyNhFTJQMxzX4ZmB5OuQiD1k_sW58BIw/viewform" CvElementArea="1149, 775, 28, 27" CvType="RadioButton" DesignTimeRectangle="1153, 779, 20, 20" DesignTimeScaleFactor="1" FullSelectorArgument="[ToBeClickedSelectors11(2)]" FuzzySelectorArgument="&lt;webctrl type='' class='AB7Lab Id5V1' tag='DIV' aaname='' /&gt;" Guid="cebce63b-ec31-4315-8204-d3c5a0664bd9" InformativeScreenshot="405d28edce53e394b822414721607a11.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Formular opționale' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                        </uix:NClick.Target>
+                      </uix:NClick>
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,143" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="[UiPath.Core.Activities.LogLevel.Trace]" Message="[&quot;Alegem sem 1, opțională 2&quot;]" />
+                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="PickOptionale12.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="SendForms\PickOptionale12.xaml">
+                        <ui:InvokeWorkflowFile.Arguments>
+                          <OutArgument x:TypeArguments="s:String[]" x:Key="toBeClickedSelectors12">[toBeClickedSelectors12]</OutArgument>
+                        </ui:InvokeWorkflowFile.Arguments>
+                      </ui:InvokeWorkflowFile>
+                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'DIV'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="ca0d3e73-3c03-4996-afff-d26c2b789c0d" Version="V3">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable BrowserURL="https://docs.google.com/forms/d/e/1FAIpQLSeZA4DZZcFiyBGNqlEyNhFTJQMxzX4ZmB5OuQiD1k_sW58BIw/viewform" CvElementArea="933, 597, 28, 26" CvType="RadioButton" DesignTimeRectangle="937, 600, 20, 20" DesignTimeScaleFactor="1" FullSelectorArgument="[ToBeClickedSelectors12(0)]" FuzzySelectorArgument="&lt;webctrl type='' class='AB7Lab Id5V1' tag='DIV' aaname='' /&gt;" Guid="2afbc805-9950-4f8a-9a0c-7373e58b0120" InformativeScreenshot="f63f4dc4cdf9b5a3814a108fa2bb7536.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Formular opționale' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                        </uix:NClick.Target>
+                      </uix:NClick>
+                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'DIV'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="ca0d3e73-3c03-4996-afff-d26c2b789c0d" Version="V3">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable BrowserURL="https://docs.google.com/forms/d/e/1FAIpQLSeZA4DZZcFiyBGNqlEyNhFTJQMxzX4ZmB5OuQiD1k_sW58BIw/viewform" CvElementArea="1125, 655, 27, 27" CvType="RadioButton" DesignTimeRectangle="1129, 659, 20, 20" DesignTimeScaleFactor="1" FullSelectorArgument="[ToBeClickedSelectors12(1)]" FuzzySelectorArgument="&lt;webctrl type='' class='AB7Lab Id5V1' tag='DIV' aaname='' /&gt;" Guid="f7e0ede7-4314-4f8e-b728-0f232c5ea399" InformativeScreenshot="22a6a98d2912bbb8cd531338779bd8e0.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Formular opționale' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                        </uix:NClick.Target>
+                      </uix:NClick>
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,143" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Alegem sem 2, prima opțională&quot;]" />
+                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="PickOptionale21.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="SendForms\PickOptionale21.xaml">
+                        <ui:InvokeWorkflowFile.Arguments>
+                          <OutArgument x:TypeArguments="s:String[]" x:Key="ToBeClickedSelectors21">[ToBeClickedSelectors21]</OutArgument>
+                        </ui:InvokeWorkflowFile.Arguments>
+                      </ui:InvokeWorkflowFile>
+                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'DIV'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_8" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="ca0d3e73-3c03-4996-afff-d26c2b789c0d" Version="V3">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable BrowserURL="https://docs.google.com/forms/d/e/1FAIpQLSeZA4DZZcFiyBGNqlEyNhFTJQMxzX4ZmB5OuQiD1k_sW58BIw/viewform" CvElementArea="798, 752, 26, 26" CvType="RadioButton" DesignTimeRectangle="802, 755, 20, 20" DesignTimeScaleFactor="1" FullSelectorArgument="[ToBeClickedSelectors21(0)]" FuzzySelectorArgument="&lt;webctrl type='' class='AB7Lab Id5V1' tag='DIV' aaname='' /&gt;" Guid="a6d6a21f-4273-49a2-9b24-37ddb955f236" InformativeScreenshot="c01cfb3245e29e0709fad852008a15ee.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Formular opționale' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                        </uix:NClick.Target>
+                      </uix:NClick>
+                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'DIV'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_9" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="ca0d3e73-3c03-4996-afff-d26c2b789c0d" Version="V3">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable BrowserURL="https://docs.google.com/forms/d/e/1FAIpQLSeZA4DZZcFiyBGNqlEyNhFTJQMxzX4ZmB5OuQiD1k_sW58BIw/viewform" CvElementArea="892, 822, 27, 26" CvType="RadioButton" DesignTimeRectangle="896, 825, 20, 20" DesignTimeScaleFactor="1" FullSelectorArgument="[ToBeClickedSelectors21(1)]" FuzzySelectorArgument="&lt;webctrl type='' class='AB7Lab Id5V1' tag='DIV' aaname='' /&gt;" Guid="809b5906-8c6a-4fa5-a17e-d3501de321c5" InformativeScreenshot="4092283a2c505fbfe427ee0d8e57c0fe.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Formular opționale' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                        </uix:NClick.Target>
+                      </uix:NClick>
+                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'DIV'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_10" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="ca0d3e73-3c03-4996-afff-d26c2b789c0d" Version="V3">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable BrowserURL="https://docs.google.com/forms/d/e/1FAIpQLSeZA4DZZcFiyBGNqlEyNhFTJQMxzX4ZmB5OuQiD1k_sW58BIw/viewform" CvElementArea="985, 776, 28, 26" CvType="RadioButton" DesignTimeRectangle="990, 778, 20, 20" DesignTimeScaleFactor="1" FullSelectorArgument="[ToBeClickedSelectors21(2)]" FuzzySelectorArgument="&lt;webctrl type='' class='AB7Lab Id5V1' tag='DIV' aaname='' /&gt;" Guid="cb7cd850-9070-4e99-a98b-f139789c4778" InformativeScreenshot="30ec07a32c075e25b4ce34793a612e33.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Formular opționale' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                        </uix:NClick.Target>
+                      </uix:NClick>
+                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'DIV'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_11" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="ca0d3e73-3c03-4996-afff-d26c2b789c0d" Version="V3">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable BrowserURL="https://docs.google.com/forms/d/e/1FAIpQLSeZA4DZZcFiyBGNqlEyNhFTJQMxzX4ZmB5OuQiD1k_sW58BIw/viewform" CvElementArea="1080, 611, 28, 27" CvType="RadioButton" DesignTimeRectangle="1084, 615, 20, 20" DesignTimeScaleFactor="1" FullSelectorArgument="[ToBeClickedSelectors21(3)]" FuzzySelectorArgument="&lt;webctrl type='' class='AB7Lab Id5V1' tag='DIV' aaname='' /&gt;" Guid="6d72dbf8-155a-4a19-bb32-e08e15543509" InformativeScreenshot="68c7802539eebdd1252ecb3fd122e0ac.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Formular opționale' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                        </uix:NClick.Target>
+                      </uix:NClick>
+                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'DIV'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_12" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="ca0d3e73-3c03-4996-afff-d26c2b789c0d" Version="V3">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable BrowserURL="https://docs.google.com/forms/d/e/1FAIpQLSeZA4DZZcFiyBGNqlEyNhFTJQMxzX4ZmB5OuQiD1k_sW58BIw/viewform" CvElementArea="1174, 691, 28, 26" CvType="RadioButton" DesignTimeRectangle="1178, 695, 20, 20" DesignTimeScaleFactor="1" FullSelectorArgument="[ToBeClickedSelectors21(4)]" FuzzySelectorArgument="&lt;webctrl type='' class='AB7Lab Id5V1' tag='DIV' aaname='' /&gt;" Guid="6e864cc6-babf-49dc-be58-0ab65d3500dd" InformativeScreenshot="c459817a0d2ae9c3d5297966302ac2eb.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Formular opționale' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                        </uix:NClick.Target>
+                      </uix:NClick>
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,143" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Alegem sem 2, a-2-a opțională&quot;]" />
+                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="PickOptionale22.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="SendForms\PickOptionale22.xaml">
+                        <ui:InvokeWorkflowFile.Arguments>
+                          <OutArgument x:TypeArguments="s:String[]" x:Key="ToBeClickedSelectors22">[ToBeClickedSelectors22]</OutArgument>
+                        </ui:InvokeWorkflowFile.Arguments>
+                      </ui:InvokeWorkflowFile>
+                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'DIV'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_13" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="ca0d3e73-3c03-4996-afff-d26c2b789c0d" Version="V3">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable BrowserURL="https://docs.google.com/forms/d/e/1FAIpQLSeZA4DZZcFiyBGNqlEyNhFTJQMxzX4ZmB5OuQiD1k_sW58BIw/viewform" CvElementArea="859, 672, 27, 26" CvType="RadioButton" DesignTimeRectangle="863, 675, 20, 20" DesignTimeScaleFactor="1" FullSelectorArgument="[ToBeClickedSelectors22(0)]" FuzzySelectorArgument="&lt;webctrl type='' class='AB7Lab Id5V1' tag='DIV' aaname='' /&gt;" Guid="f327ff73-deb6-475b-ae84-89460692a7de" InformativeScreenshot="c1cfcc2782e7d12123fae93fc2291596.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Formular opționale' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                        </uix:NClick.Target>
+                      </uix:NClick>
+                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'DIV'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_14" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="ca0d3e73-3c03-4996-afff-d26c2b789c0d" Version="V3">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable BrowserURL="https://docs.google.com/forms/d/e/1FAIpQLSeZA4DZZcFiyBGNqlEyNhFTJQMxzX4ZmB5OuQiD1k_sW58BIw/viewform" CvElementArea="726, 736, 27, 26" CvType="RadioButton" DesignTimeRectangle="730, 739, 20, 20" DesignTimeScaleFactor="1" FullSelectorArgument="[ToBeClickedSelectors22(1)]" FuzzySelectorArgument="&lt;webctrl type='' class='AB7Lab Id5V1' tag='DIV' aaname='' /&gt;" Guid="5110f8a9-6da5-4a0f-8bdb-7c4d0f1e1f56" ImageBase64="" InformativeScreenshot="ca6e91336ee7c8ce071b2307df9c20c6.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Formular opționale' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                        </uix:NClick.Target>
+                      </uix:NClick>
+                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'DIV'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_15" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="ca0d3e73-3c03-4996-afff-d26c2b789c0d" Version="V3">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable BrowserURL="https://docs.google.com/forms/d/e/1FAIpQLSeZA4DZZcFiyBGNqlEyNhFTJQMxzX4ZmB5OuQiD1k_sW58BIw/viewform" CvElementArea="871, 795, 28, 27" CvType="RadioButton" DesignTimeRectangle="875, 799, 20, 20" DesignTimeScaleFactor="1" FullSelectorArgument="[ToBeClickedSelectors22(2)]" FuzzySelectorArgument="&lt;webctrl type='' class='AB7Lab Id5V1' tag='DIV' aaname='' /&gt;" Guid="fff22fdd-30f3-45c8-af9c-0ee217b778cb" InformativeScreenshot="97e81f16bb3749810c4139d8a3c0c1a3.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Formular opționale' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                        </uix:NClick.Target>
+                      </uix:NClick>
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,143" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Trimit formular&quot;]" />
+                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Trimite'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_16" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="ca0d3e73-3c03-4996-afff-d26c2b789c0d" Version="V3">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable BrowserURL="https://docs.google.com/forms/d/e/1FAIpQLSeZA4DZZcFiyBGNqlEyNhFTJQMxzX4ZmB5OuQiD1k_sW58BIw/viewform" CvElementArea="186, 830, 122, 49" CvTextArea="215, 843, 61, 17" CvTextArgument="Trimite" CvType="Button" DesignTimeRectangle="188, 832, 119, 45" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' tag='SPAN' class='l4V7wb Fxmcue' aaname='' check:innerText='Trimite' /&gt;" Guid="4b19042b-1217-423b-a38d-ca10c3e341d6" InformativeScreenshot="6ee2f2f8b49f120e1fdbeba895e7205b.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Formular opționale' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                        </uix:NClick.Target>
+                      </uix:NClick>
+                    </Sequence>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Trimite alt răspuns'" sap:VirtualizedContainerService.HintSize="450,157" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="ca0d3e73-3c03-4996-afff-d26c2b789c0d" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="https://docs.google.com/forms/u/0/d/e/1FAIpQLSctGv9ANwIY61r9vJnAWbAMfKr5-oJKQRNTFf75H4YT0DOYxQ/formResponse" CvTextArea="651, 276, 119, 17" CvTextArgument="Trimite alt raspuns" CvType="Text" DesignTimeRectangle="653, 276, 116, 17" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='A' type='' class='' aaname='Trimite alt răspuns' check:innerText='Trimite alt răspuns' /&gt;" Guid="3212cda4-411a-44cf-818d-7f662f753410" InformativeScreenshot="845a888d2384fdcd2993ab0113080854.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Formular opționale' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive" />
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEach.Body>
+            </ui:ForEach>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1936, 1048" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAWJQAAFiUBSVIk8AAAAQhJREFUWEftl9ENwjAMRDsCIzAKm8AGsAGMwEaMwgiMQP0qTkKy09YkfCDypJNKnFzckLTu0AnYmW6mh+nZUHjuTbOcTdHglmKOkINJnS6mjSlCfTLgdTJpLKvsYIkI0nGOTxIQ3Bhjmcsh49Kdi5oE8GYs+8ux1libczv9ylOcZ20CWsZaOYqBgKup9pg6ioHG9AR6Ar+XAG8wjtz9dS2y7SKdAEaKYSyy7UIxRymAiWKYi2y7UMxRCvCaxghjrkW2XaQTaE1PoCdQnEfHZ6kkq0ElWZiAilIqnm9xNDFHWJRSKis7KuOWK4HX+zdH9IieaFXvzWlxhXl66e9oJfYXnuEHyT8zDCPMjw3PbnWtNQAAAABJRU5ErkJggg==" InformativeScreenshot="76070893d87f4d1e007710d9fd692327.png" Selector="&lt;html app='msedge.exe' title='New tab' /&gt;" Title="New tab" Url="edge://newtab/" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
